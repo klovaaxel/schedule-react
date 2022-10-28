@@ -14,13 +14,15 @@ You will also see any lint errors in the console.
 
 ### `npm run deploy`
 
-Deploys the app (AS IT IS LOCALLY) to GitHub Pages.
+Deploys the app _as it exists locally_ to GitHub Pages.
 Builds and build history can be found in the gh-pages branch
+
+#### `npm run deploy -- -m "Commit message"`
+
+To include/customize the commit message on the gh-pages branch
 
 Open [https://www.klovaaxel.github.io/schedule-react/
 ](https://www.klovaaxel.github.io/schedule-react/) to view it in the browser.
-
-`npm run deploy -- -m "Commit message"`
 
 ### `npm test`
 
