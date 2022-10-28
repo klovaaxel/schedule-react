@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../../logo.svg";
 
 export const About = () => {
     return (
