@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.main-navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0 1rem;
+    height: 5rem;
+    background-color: azure;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    top: 0;
+
+    .branding {
+        margin-right: auto;
+
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        img {
+            display: inline-block;
+            height: 90%;
+            width: var(--small-screen);
+        }
+        h2 {
+            display: inline-block;
+            flex-grow: 1;
+
+            @media screen and (max-width: $small-screen) {
+                & {
+                    display: none;
+                }
+            }
+        }
+    }
+}

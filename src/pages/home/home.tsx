@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { Navbar } from "../../components/navbar/navbar";
 import logo from "../../logo.svg";
+import "./home.scss";
 
 export const Home = () => {
     return (
-        <main>
+        <section>
             <h1>Hello world!</h1>
             <p>I'm a homepage</p>
             <Link to="/about">About</Link>
@@ -23,6 +25,6 @@ export const Home = () => {
                     </a>
                 </header>
             </section>
-        </main>
+        </section>
     );
 };
