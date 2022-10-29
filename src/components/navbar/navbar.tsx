@@ -10,7 +10,7 @@ const Navbar = () => {
     const pageTitle = useSelector((state: any) => state.currentPageTitle);
     console.log(pageTitle);
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <nav className="main-navbar">
