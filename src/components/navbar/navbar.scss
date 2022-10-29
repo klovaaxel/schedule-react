@@ -14,9 +14,7 @@
 
     top: 0;
 
-    .branding {
-        margin-right: auto;
-
+    .logo {
         height: 100%;
 
         display: flex;
@@ -25,17 +23,20 @@
         img {
             display: inline-block;
             height: 90%;
-            width: var(--small-screen);
         }
-        h2 {
-            display: inline-block;
-            flex-grow: 1;
+    }
 
-            @media screen and (max-width: $small-screen) {
-                & {
-                    display: none;
-                }
+    .page-title {
+        display: inline-block;
+
+        @media screen and (max-width: $small-screen) {
+            & {
+                display: none;
             }
         }
+    }
+
+    .pages {
+        margin-left: auto;
     }
 }

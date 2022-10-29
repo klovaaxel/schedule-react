@@ -9,11 +9,15 @@ const Navbar = () => {
 
     return (
         <nav className="main-navbar">
-            <Link to="/" className="branding">
+            <Link to="/" className="logo">
                 <img src={logo} alt="App-Logo" />
             </Link>
-            <h2 className="current-page-title">{pageTitle}</h2>
-            <Link to="about">About</Link>
+
+            <h2 className="page-title">{pageTitle}</h2>
+
+            <nav className="pages">
+                <Link to="about">About</Link>
+            </nav>
         </nav>
     );
 };
