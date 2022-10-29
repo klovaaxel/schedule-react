@@ -4,10 +4,13 @@ import "./navbar.scss";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
     const pageTitle = useSelector((state: any) => state.currentPageTitle);
     console.log(pageTitle);
+
+    const { t, i18n } = useTranslation();
 
     return (
         <nav className="main-navbar">
@@ -20,7 +23,7 @@ const Navbar = () => {
             <nav className="pages">
                 <Link to="about">
                     <FontAwesomeIcon icon={faCircleInfo} />
-                    About
+                    {t("navbar.link-titles.about")}
                 </Link>
             </nav>
         </nav>
