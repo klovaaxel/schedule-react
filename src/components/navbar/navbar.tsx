@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import "./navbar.scss";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     const pageTitle = useSelector((state: any) => state.currentPageTitle);
@@ -16,7 +18,10 @@ const Navbar = () => {
             <h2 className="page-title">{pageTitle}</h2>
 
             <nav className="pages">
-                <Link to="about">About</Link>
+                <Link to="about">
+                    <FontAwesomeIcon icon={faCircleInfo} />
+                    About
+                </Link>
             </nav>
         </nav>
     );

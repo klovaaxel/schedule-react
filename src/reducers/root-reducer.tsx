@@ -1,5 +1,3 @@
-import { Action } from "redux";
-
 const initState = {
     currentPageTitle: "Hello world",
 };
