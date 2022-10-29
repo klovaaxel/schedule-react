@@ -1,9 +1,16 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Navbar } from "../../components/navbar/navbar";
 import logo from "../../logo.svg";
 import "./home.scss";
 
 export const Home = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch({ type: "CHANGE_PAGE_TITLE", value: "Home" });
+    });
+
     return (
         <section>
             <h1>Hello world!</h1>
