@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
     const pageTitle = useSelector((state: any) => state.currentPageTitle);
-    console.log(pageTitle);
 
     const { t } = useTranslation();
 
