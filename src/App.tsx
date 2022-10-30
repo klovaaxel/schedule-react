@@ -3,6 +3,7 @@ import "./App.scss";
 import Navbar from "./components/navbar/navbar";
 import { About } from "./pages/about/about";
 import { Home } from "./pages/home/home";
+import "react-widgets/scss/styles.scss";
 
 function App() {
     return (
