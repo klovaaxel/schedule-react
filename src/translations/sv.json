@@ -1,4 +1,13 @@
 {
+    "assignments": "Uppgifter",
+    "schedule": "Planering",
+
+    "week-selector-label": "Vecka",
+    "week-selector-tooltip": "Välj den skolvecka du vill see",
+
+    "group-selector-label": "Grupp",
+    "group-selector-tooltip": "Välj grupp skolvecka du vill see",
+
     "navbar": {
         "link-titles": {
             "about": "Om oss"

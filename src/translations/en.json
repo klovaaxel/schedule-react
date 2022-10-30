@@ -1,4 +1,13 @@
 {
+    "assignments": "Assignments",
+    "schedule": "Schedule",
+
+    "week-selector-label": "Week",
+    "week-selector-tooltip": "Choose the school week you want to see",
+
+    "group-selector-label": "Group",
+    "group-selector-tooltip": "Choose the group you want to see",
+
     "navbar": {
         "link-titles": {
             "about": "About"
