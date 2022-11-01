@@ -56,10 +56,16 @@ export const Home = () => {
             <section>
                 <p>Groups : </p>
                 <Link to="/about">About</Link>
-
-                {groups.map((group) => {
-                    return <GroupOverview {...groups[0]} />;
-                })}
+                <Link to="/course/17tei">Course</Link>
+                <ul className="course-list">
+                    {groups.map((group) => {
+                        return (
+                            <li key={group.id}>
+                                <GroupOverview {...group} />;
+                            </li>
+                        );
+                    })}
+                </ul>
             </section>
             <aside>
                 <h2>{t("assignments")}</h2>
