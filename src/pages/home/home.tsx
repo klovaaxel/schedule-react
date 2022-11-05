@@ -13,15 +13,23 @@ export const Home = () => {
 
     const [groups, setGroups] = useState<GroupModel[]>([]);
 
+    let isLoading: boolean = false;
+
     useEffect(() => {
+        isLoading = true;
+
         dispatch({ type: "CHANGE_PAGE_TITLE", value: "TC-Stenungsund" });
 
         const doAsync = async () => {
-            const groups = await GetGroupList();
-            setGroups(groups);
+            //If groups are missing get groups
+            if (groups.length <= 0) {
+                const groups = await GetGroupList();
+                setGroups(groups);
+            }
         };
 
         doAsync();
+        isLoading = false;
     });
 
     return (
