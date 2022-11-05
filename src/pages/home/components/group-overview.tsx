@@ -1,8 +1,6 @@
-import { useTranslation } from "react-i18next";
-import IGroup from "../../../interfaces/i-group";
-
-const GroupOverview = (group: IGroup) => {
-    const { t } = useTranslation();
+//import { useTranslation } from "react-i18next";
+const GroupOverview = (group: any) => {
+    //const { t } = useTranslation();
 
     return (
         <article>

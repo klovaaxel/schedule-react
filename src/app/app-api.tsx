@@ -3,8 +3,8 @@ export const GetCourses = async () => {
         "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb01-ind.md"
     );
 
-    if (response.ok) {
-        const courses = await response.text();
-        console.log(courses);
-    }
+    // if (response.ok) {
+    //     const courses = await response.text();
+    //     console.log(courses);
+    // }
 };

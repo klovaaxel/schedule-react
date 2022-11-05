@@ -1,26 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import logo from "../../logo.svg";
+import { GetGroupList } from "../../objects/group/group-api";
+import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
-import GroupOverview from "./components/group-overview";
 import "./home.scss";
 
 export const Home = () => {
     const dispatch = useDispatch();
     const { t } = useTranslation();
 
+    const [groups, setGroups] = useState<GroupModel[]>([]);
+
     useEffect(() => {
         dispatch({ type: "CHANGE_PAGE_TITLE", value: "TC-Stenungsund" });
-    });
 
-    const groups = [
-        {
-            id: "22tei",
-            name: "2022 Informations- och medieteknik",
-        },
-    ];
+        const doAsync = async () => {
+            const groups = await GetGroupList();
+            setGroups(groups);
+        };
+
+        doAsync();
+    });
 
     return (
         <main className="home-page">
@@ -59,11 +61,7 @@ export const Home = () => {
                 <Link to="/course/17tei">Course</Link>
                 <ul className="course-list">
                     {groups.map((group) => {
-                        return (
-                            <li key={group.id}>
-                                <GroupOverview {...group} />;
-                            </li>
-                        );
+                        return <li key={group.id}>{group.id}</li>;
                     })}
                 </ul>
             </section>

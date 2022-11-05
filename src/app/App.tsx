@@ -5,11 +5,8 @@ import { About } from "../pages/about/about";
 import { Home } from "../pages/home/home";
 import "react-widgets/scss/styles.scss";
 import CourseOverview from "../pages/course-overview/course-overview";
-import { GetCourses } from "./app-api";
 
 function App() {
-    GetCourses();
-
     return (
         <div className="App">
             <Navbar />
