@@ -1,12 +1,14 @@
+import resolveJSON from "../../components/resolve-json";
 import ICourse from "./course-interface";
 import { CourseModel } from "./course-model";
 
 export const GetCourseList = async () => {
-    const response = await window.fetch(
+    const request = await window.fetch(
         "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json"
     );
 
-    const courseList: ICourse[] = response.ok ? await response.json() : null;
+    const response = request.ok ? await request.json() : null;
+    const courseList: ICourse[] = (await resolveJSON(response)) ?? null;
     const modelList: CourseModel[] = courseList.map((x) => new CourseModel(x));
 
     return modelList;

@@ -15,7 +15,7 @@ const resolveJSON = async (json: any) => {
             itemKey = refUrl.split("#")[1] ?? null;
         }
 
-        const response = await window.fetch(process.env.PUBLIC_URL + url);
+        const response = await window.fetch(url);
         const text = await response.text();
         if (itemKey) {
             const item =
