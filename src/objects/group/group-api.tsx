@@ -11,7 +11,5 @@ export const GetGroupList = async () => {
     const groupList: IGroup[] = (await resolveJSON(response)) ?? null;
     const modelList: GroupModel[] = groupList.map((x) => new GroupModel(x));
 
-    console.log(modelList);
-
     return modelList;
 };
