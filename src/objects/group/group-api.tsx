@@ -4,7 +4,7 @@ import resolveJSON from "../../components/resolve-json";
 
 export const GetGroupList = async () => {
     const request = await window.fetch(
-        process.env.PUBLIC_URL + "/group-list.json"
+        "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/groups.json"
     );
 
     const response = request.ok ? await request.json() : null;

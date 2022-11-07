@@ -3,7 +3,7 @@ import { CourseModel } from "./course-model";
 
 export const GetCourseList = async () => {
     const response = await window.fetch(
-        process.env.PUBLIC_URL + "/course-list.json"
+        "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json"
     );
 
     const courseList: ICourse[] = response.ok ? await response.json() : null;
