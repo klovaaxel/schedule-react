@@ -3,6 +3,10 @@
         "id": "20tei",
         "enrollYear": 2020,
         "gradYear": 2023,
-        "courses": ["weuweb02"]
+        "courses": [
+            {
+                "@ref": "/course-list.json#weuweb01"
+            }
+        ]
     }
 ]

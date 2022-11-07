@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "./i18n";
 
+import { Resolver } from "@stoplight/json-ref-resolver";
 import { Provider } from "react-redux";
 import store from "./store/page-store";
 
