@@ -6,6 +6,7 @@ import { GetGroupList } from "../../objects/group/group-api";
 import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
 import "./home.scss";
+import GroupOverview from "./components/group-overview";
 
 export const Home = () => {
     const dispatch = useDispatch();
@@ -13,10 +14,10 @@ export const Home = () => {
 
     const [groups, setGroups] = useState<GroupModel[]>([]);
 
-    let isLoading: boolean = false;
+    // let isLoading: boolean = false;
 
     useEffect(() => {
-        isLoading = true;
+        // isLoading = true;
 
         dispatch({ type: "CHANGE_PAGE_TITLE", value: "TC-Stenungsund" });
 
@@ -29,7 +30,7 @@ export const Home = () => {
         };
 
         doAsync();
-        isLoading = false;
+        // isLoading = false;
     });
 
     return (
@@ -69,7 +70,11 @@ export const Home = () => {
                 <Link to="/course/17tei">Course</Link>
                 <ul className="course-list">
                     {groups.map((group) => {
-                        return <li key={group.id}>{group.id}</li>;
+                        return (
+                            <li key={group.id}>
+                                <GroupOverview {...group} />
+                            </li>
+                        );
                     })}
                 </ul>
             </section>
