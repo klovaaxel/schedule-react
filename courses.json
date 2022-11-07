@@ -1,0 +1,12 @@
+[
+    {
+        "id": "weuweb01",
+        "name": "Webuteckling 1",
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb01-ind.md"
+    },
+    {
+        "id": "weuweb02",
+        "name": "Webuteckling 2",
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb01-ind.md"
+    }
+]
