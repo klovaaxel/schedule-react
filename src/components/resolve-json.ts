@@ -22,8 +22,9 @@ const resolveJSON = async (json: any) => {
                 text.match(new RegExp(`({[^{]*"id":[ ]?"${itemKey}"[^}]*})`)) ??
                 [];
             string = string.replace(JSON.stringify(ref), item[0]);
+        } else {
+            string = string.replace(JSON.stringify(ref), text);
         }
-        string = string.replace(JSON.stringify(ref), text);
     }
     return JSON.parse(string);
 };
