@@ -35,6 +35,10 @@ export const Home = () => {
 
     return (
         <main className="home-page">
+            <aside>
+                <Link to="/about">About</Link>
+                <Link to="/course/17tei">Course</Link>
+            </aside>
             <header>
                 <h1 className="page-title">{t("schedule")}</h1>
                 <nav>
@@ -64,11 +68,8 @@ export const Home = () => {
                     </span>
                 </nav>
             </header>
-            <section>
-                <p>Groups : </p>
-                <Link to="/about">About</Link>
-                <Link to="/course/17tei">Course</Link>
-                <ul className="course-list">
+            <section className="groups">
+                <ul>
                     {groups.map((group) => {
                         return (
                             <li key={group.id}>

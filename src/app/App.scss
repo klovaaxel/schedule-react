@@ -1,13 +1,34 @@
 $small-screen: 80ch;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-left: -0.5em;
-    margin-right: -0.5em;
+$font-family: "Atkinson Hyperlegible", sans-serif;
+
+$color-page: #fff;
+$color-bg: #deebf1;
+$color-primary: #4789c6;
+$color-primary-contrast: #fff;
+$color-secondary: #dead40;
+
+$transition-primary: 0.2s;
+
+* {
+    font-family: $font-family;
+    border-radius: 0.2rem;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     margin-left: -0.5rem;
+//     margin-right: -0.5rem;
+// }
+
+h3 {
+    border-bottom: solid #0003 0.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 label {
@@ -23,4 +44,29 @@ label {
 
 .page {
     margin: 0 1.5rem;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: normal;
+    src: local("./resources/typography/AtkinsonHyperlegible-Regular.ttf");
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: bold;
+    src: local("./resources/typography/AtkinsonHyperlegible-Bold.ttf");
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: italic;
+    font-weight: normal;
+    src: local("./resources/typography/AtkinsonHyperlegible-Italic.ttf");
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: italic;
+    font-weight: bold;
+    src: local("./resources/typography/AtkinsonHyperlegible-BoldItalic.ttf");
 }
