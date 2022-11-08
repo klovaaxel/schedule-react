@@ -14,10 +14,22 @@ const GroupOverview = (group: GroupModel) => {
                         <li key={course.id} className="course">
                             <Link to={"/course/" + course.id}>
                                 <h3>{course.name}</h3>
-                                <article>
+                                <article className="schedule">
                                     This weeks lesson plan is a mess and i dont
                                     like it
                                 </article>
+                                <aside className="assignments">
+                                    <Link
+                                        to={
+                                            "/course/" +
+                                            course.id +
+                                            "#" +
+                                            "Assignment?"
+                                        }
+                                    >
+                                        Im a Assingment
+                                    </Link>
+                                </aside>
                             </Link>
                         </li>
                     );

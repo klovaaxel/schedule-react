@@ -38,13 +38,15 @@
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
+                gap: 1rem;
             }
         }
         .course {
-            width: 100%;
+            max-width: 100%;
             flex-grow: 1;
+            flex-basis: 20rem;
 
-            a {
+            & > a {
                 color: unset;
                 text-decoration: unset;
 
@@ -61,6 +63,29 @@
 
                     padding: 0.5rem 0.5rem;
                     margin: 0 0;
+
+                    .assignments {
+                        a {
+                            background-color: $color-primary-contrast;
+                            color: $color-primary;
+                        }
+                    }
+                }
+
+                .assignments {
+                    display: flex;
+                    flex-wrap: wrap;
+                    a {
+                        color: unset;
+                        text-decoration: unset;
+
+                        background-color: $color-primary;
+                        color: $color-primary-contrast;
+
+                        display: block;
+                        padding: 0.2rem 0.5rem;
+                        margin: 0.5rem 0;
+                    }
                 }
 
                 h3 {
