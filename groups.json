@@ -11,5 +11,18 @@
                 "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
             }
         ]
+    },
+    {
+        "id": "21tei",
+        "enrollYear": 2021,
+        "gradYear": 2024,
+        "courses": [
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
+            },
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
+            }
+        ]
     }
 ]
