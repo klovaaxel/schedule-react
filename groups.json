@@ -8,7 +8,7 @@
                 "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
             },
             {
-                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb02"
             }
         ]
     },
@@ -21,7 +21,7 @@
                 "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
             },
             {
-                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb02"
             }
         ]
     }
