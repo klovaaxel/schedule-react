@@ -19,7 +19,9 @@ export const GetCourse = async (id: string) => {
     const courseList: CourseModel[] = await GetCourseList();
     const course: CourseModel | null =
         (await courseList).find((x) => x.id === id) ?? null;
-
+    if (course) {
+        course.scheduleData = await GetSchedule(course?.scheduleUrl);
+    }
     return course;
 };
 

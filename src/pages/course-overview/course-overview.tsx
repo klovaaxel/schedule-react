@@ -13,9 +13,10 @@ const CourseOverview = () => {
 
     useEffect(() => {
         async function getCourseInfo() {
-            const course = await GetCourse("weuweb01");
-
-            setCourse(course ? course : new CourseModel(null));
+            if (!course) {
+                const course = await GetCourse("weuweb01");
+                setCourse(course ? course : new CourseModel(null));
+            }
         }
 
         getCourseInfo();
@@ -31,7 +32,12 @@ const CourseOverview = () => {
         });
     });
 
-    return <h1>Hello world, I am {id}</h1>;
+    return (
+        <article>
+            <h1>Hello world, I am {id}</h1>
+            <section>{course?.scheduleData}</section>
+        </article>
+    );
 };
 
 export default CourseOverview;
