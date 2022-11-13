@@ -18,21 +18,40 @@ $shadow-default: rgba(100, 100, 111, 0.05) 0px 7px 29px 0px;
     border-radius: 0.2rem;
 }
 
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+h2 {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+h5 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+h6 {
+    font-weight: bold;
+    font-size: 1rem;
+}
 // h1,
 // h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     margin-left: -0.5rem;
-//     margin-right: -0.5rem;
-// }
-
-h3 {
+h3,
+h4,
+h5,
+h6 {
     border-bottom: solid #0003 0.2rem;
     border-radius: 0;
     margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
 }
 
 label {

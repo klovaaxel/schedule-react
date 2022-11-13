@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { GetCourse } from "../../objects/course/course-api";
 import { CourseModel } from "../../objects/course/course-model";
+import "./course-overview.scss";
 
 const CourseOverview = () => {
     const dispatch = useDispatch();
@@ -40,7 +41,7 @@ const CourseOverview = () => {
     console.log(course?.scheduleData);
 
     return (
-        <article>
+        <article className="course-overview">
             <section dangerouslySetInnerHTML={{ __html: html }}></section>
         </article>
     );
