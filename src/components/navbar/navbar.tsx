@@ -18,9 +18,6 @@ const Navbar = () => {
 
     const { t } = useTranslation();
 
-    console.log(pageTitle);
-    console.log(currentPage);
-
     return (
         <nav className="main-navbar">
             <Link to="/" className="logo">
