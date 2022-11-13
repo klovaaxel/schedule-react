@@ -8,7 +8,7 @@ export const About = () => {
     useEffect(() => {
         dispatch({
             type: "CHANGE_PAGE",
-            value: { currentPageTitle: "About", currentPage: "about" },
+            value: { currentPageTitle: "About", currentPage: "external" },
         });
     });
 

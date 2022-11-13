@@ -1,5 +1,7 @@
 @import "../../app/App.scss";
 
+$navbar-height: 5rem;
+
 .main-navbar {
     display: flex;
     align-items: center;
@@ -7,7 +9,7 @@
 
     padding: 0 1rem;
     margin: 0 0 2rem 0;
-    height: 5rem;
+    height: $navbar-height;
 
     background-color: $color-primary-contrast;
     box-shadow: $shadow-default;
@@ -16,6 +18,8 @@
     position: sticky;
     top: 0;
     z-index: 10;
+
+    border-radius: 0;
 
     .logo {
         height: 100%;

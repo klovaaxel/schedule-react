@@ -1,0 +1,22 @@
+@import "../../app/App.scss";
+@import "../../components/navbar/navbar.scss";
+
+.App:has(.page .external) .main-navbar {
+    margin: 0;
+}
+
+.page:has(.external) {
+    margin: 0;
+}
+
+.external {
+    height: calc(100vh - $navbar-height);
+    overflow: hidden;
+    border-radius: 0;
+    iframe {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        height: calc(100vh - $navbar-height);
+    }
+}

@@ -28,35 +28,35 @@ const Navbar = () => {
 
             <nav className="pages">
                 <Link
-                    to="about"
+                    to="external?title=Skola24&url=https://web.skola24.se/timetable/timetable-viewer/stenungsund.skola24.se/Nösnäsgymnasiet/"
                     className={currentPage === "about" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faCalendarDays} />
                     <span>{t("navbar.link-titles.course-schedule")}</span>
                 </Link>
                 <Link
-                    to="about"
+                    to="external?title=Matsedeln&url=https://www.skolmaten.se/nosnasgymnasiet/"
                     className={currentPage === "food-schedule" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faUtensils} />
                     <span>{t("navbar.link-titles.food-schedule")}</span>
                 </Link>
                 <Link
-                    to="about"
+                    to="external?title=Matsedeln&url=https://stenungsund.skola24.se/"
                     className={currentPage === "student-login" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faIdCard} />
                     <span>{t("navbar.link-titles.student-login")}</span>
                 </Link>
                 <Link
-                    to="about"
+                    to="external?title=Matsedeln&url=https://tcstenungsund.github.io/digital-signage/"
                     className={currentPage === "student-info" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faTv} />
                     <span>{t("navbar.link-titles.student-info")}</span>
                 </Link>
                 <Link
-                    to="about"
+                    to="https://www.netacad.com/"
                     className={
                         currentPage === "reading-material" ? "active" : ""
                     }

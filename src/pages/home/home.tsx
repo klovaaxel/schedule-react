@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { GetGroupList } from "../../objects/group/group-api";
 import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
-import "./home.scss";
 import GroupOverview from "./components/group-overview";
+import "./home.scss";
 
 export const Home = () => {
     const dispatch = useDispatch();
