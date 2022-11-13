@@ -32,10 +32,16 @@ const CourseOverview = () => {
         });
     });
 
+    var showdown = require("showdown"),
+        converter = new showdown.Converter(),
+        text = course?.scheduleData,
+        html = converter.makeHtml(text);
+
+    console.log(course?.scheduleData);
+
     return (
         <article>
-            <h1>Hello world, I am {id}</h1>
-            <section>{course?.scheduleData}</section>
+            <section dangerouslySetInnerHTML={{ __html: html }}></section>
         </article>
     );
 };
