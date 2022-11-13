@@ -35,11 +35,6 @@ const CourseOverview = () => {
         });
     });
 
-    var showdown = require("showdown"),
-        converter = new showdown.Converter(),
-        text = course?.scheduleData,
-        html = converter.makeHtml(text);
-
     useEffect(() => {
         const weekNum = searchParams.get("week") ?? "";
         const week = document.getElementsByClassName(weekNum)[0];
@@ -52,7 +47,9 @@ const CourseOverview = () => {
 
     return (
         <article className="course-overview">
-            <section dangerouslySetInnerHTML={{ __html: html }}></section>
+            <section
+                dangerouslySetInnerHTML={{ __html: course?.scheduleData ?? "" }}
+            ></section>
         </article>
     );
 };

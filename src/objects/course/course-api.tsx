@@ -40,13 +40,20 @@ export const GetSchedule = async (url: string) => {
 
         const tagStart = `<div class="week ${weekNum}${
             weekNum === getWeekNumber().toString() ? " current" : ""
-        }" markdown="1">\n\n`;
+        }" markdown="1">`;
 
-        const tagEnd = `</div>`;
+        const tagEnd = `</div>\n\n`;
 
         schedule = schedule.replace(week, tagStart + week + tagEnd);
     }
 
     schedule.replace("DOCEND", "");
-    return schedule;
+
+    var showdown = require("showdown"),
+        converter = new showdown.Converter(),
+        html = converter.makeHtml(schedule);
+
+    console.log(html);
+
+    return html;
 };
