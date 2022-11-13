@@ -14,7 +14,13 @@ const CourseOverview = () => {
     }
 
     useEffect(() => {
-        dispatch({ type: "CHANGE_PAGE_TITLE", value: "Course Name" });
+        dispatch({
+            type: "CHANGE_PAGE",
+            value: {
+                currentPageTitle: "course-title",
+                currentPage: "course-id",
+            },
+        });
 
         test();
     });

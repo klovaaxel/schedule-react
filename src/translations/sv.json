@@ -10,7 +10,12 @@
 
     "navbar": {
         "link-titles": {
-            "about": "Om oss"
+            "about": "Om oss",
+            "course-schedule": "Schema",
+            "food-schedule": "Matsedel",
+            "student-login": "Skola24",
+            "student-info": "Info",
+            "reading-material": "Netacad"
         }
     }
 }

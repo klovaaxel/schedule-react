@@ -6,13 +6,16 @@
     gap: 1rem;
 
     padding: 0 1rem;
+    margin: 0 0 2rem 0;
     height: 5rem;
-    background-color: azure;
 
-    // position: -webkit-sticky;
-    // position: sticky;
+    background-color: $color-primary-contrast;
+    box-shadow: $shadow-default;
 
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
+    z-index: 10;
 
     .logo {
         height: 100%;
@@ -38,5 +41,42 @@
 
     .pages {
         margin-left: auto;
+        display: flex;
+
+        a {
+            margin: 0 1rem;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+
+            text-decoration: none;
+            color: $color-primary;
+
+            transition: $transition-primary;
+
+            &:hover,
+            &:not(:has(~ :hover)).active {
+                background-color: $color-primary;
+                color: $color-primary-contrast;
+                margin: 0;
+                padding: 1rem 1rem;
+                transition: $transition-primary;
+            }
+
+            &:not(:hover :has(~ :hover)).active {
+                transition-delay: $transition-primary;
+            }
+
+            span {
+                margin-left: 0.25rem;
+                @media screen and (max-width: $medium-screen) {
+                    display: none;
+                }
+            }
+
+            svg {
+                font-size: 1.25rem;
+            }
+        }
     }
 }

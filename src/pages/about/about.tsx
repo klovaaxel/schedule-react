@@ -6,7 +6,10 @@ export const About = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({ type: "CHANGE_PAGE_TITLE", value: "About" });
+        dispatch({
+            type: "CHANGE_PAGE",
+            value: { currentPageTitle: "About", currentPage: "about" },
+        });
     });
 
     return (

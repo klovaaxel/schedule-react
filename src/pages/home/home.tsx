@@ -19,7 +19,13 @@ export const Home = () => {
     useEffect(() => {
         // isLoading = true;
 
-        dispatch({ type: "CHANGE_PAGE_TITLE", value: "TC-Stenungsund" });
+        dispatch({
+            type: "CHANGE_PAGE",
+            value: {
+                currentPageTitle: "TC-Stenugnsund",
+                currentPage: "home",
+            },
+        });
 
         const doAsync = async () => {
             //If groups are missing get groups
