@@ -6,8 +6,12 @@ import { Home } from "../pages/home/home";
 import "react-widgets/scss/styles.scss";
 import CourseOverview from "../pages/course-overview/course-overview";
 import ExteralSite from "../pages/external/external";
+import ReactGA from "react-ga4";
 
 function App() {
+    ReactGA.initialize("G-R91340SD8Y");
+    ReactGA.pageview(window.location.pathname);
+
     return (
         <div className="App">
             <Navbar />

@@ -4,15 +4,11 @@ import ReactDOM from "react-dom/client";
 import App from "./app/App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import ReactGA from "react-ga";
 import "./index.scss";
 import "./i18n";
 
 import { Provider } from "react-redux";
 import store from "./store/page-store";
-
-ReactGA.initialize("G-R91340SD8Y");
-ReactGA.pageview(window.location.pathname);
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
