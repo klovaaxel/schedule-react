@@ -12,7 +12,7 @@ const GroupOverview = (group: GroupModel) => {
                 {group.courses?.map((course) => {
                     return (
                         <li key={course.id} className="course">
-                            <Link to={"/course/" + course.id}>
+                            <Link to={"/course/" + course.id + "?week=current"}>
                                 <h3>{course.name}</h3>
                                 <article className="schedule">
                                     This weeks lesson plan is a mess and i dont

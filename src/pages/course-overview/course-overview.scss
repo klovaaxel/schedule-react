@@ -4,4 +4,23 @@
     img {
         max-width: 100%;
     }
+    & > section {
+        max-width: 65ch;
+        margin: 0 auto;
+
+        .week {
+            display: block;
+            margin: 0.5rem 0;
+
+            &.current {
+                background-color: $color-bg;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                padding: 0.5rem 1rem;
+            }
+            h2 {
+                margin-top: 0.5rem;
+            }
+        }
+    }
 }

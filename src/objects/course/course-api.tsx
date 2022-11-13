@@ -1,4 +1,5 @@
 import resolveJSON from "../../components/resolve-json";
+import { getWeekNumber } from "../../components/week-number";
 import ICourse from "./course-interface";
 import { CourseModel } from "./course-model";
 
@@ -27,7 +28,25 @@ export const GetCourse = async (id: string) => {
 
 export const GetSchedule = async (url: string) => {
     const response = await window.fetch(url);
-    const schedule = await response.text();
+    let schedule = await response.text();
 
+    // TODO: Clean up this mess...
+    const weeks =
+        (schedule + "DOCEND").match(/\n##(.+?(?=\n##)|.+?(?=DOCEND))/gms) ?? [];
+
+    for (const week of weeks) {
+        const weekNumMatch = /(##[^0-9,\n]*)(\d{1,2})/g.exec(week);
+        const weekNum = weekNumMatch ? weekNumMatch[2] : "";
+
+        const tagStart = `<div class="week ${weekNum}${
+            weekNum === getWeekNumber().toString() ? " current" : ""
+        }" markdown="1">\n\n`;
+
+        const tagEnd = `</div>`;
+
+        schedule = schedule.replace(week, tagStart + week + tagEnd);
+    }
+
+    schedule.replace("DOCEND", "");
     return schedule;
 };

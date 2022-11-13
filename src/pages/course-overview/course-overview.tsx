@@ -1,7 +1,8 @@
+import { current } from "@reduxjs/toolkit";
 import { useEffect, useState } from "react";
 //import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { GetCourse } from "../../objects/course/course-api";
 import { CourseModel } from "../../objects/course/course-model";
 import "./course-overview.scss";
@@ -11,6 +12,7 @@ const CourseOverview = () => {
     //const { t } = useTranslation();
     const { id } = useParams();
     const [course, setCourse] = useState<CourseModel>();
+    const [searchParams] = useSearchParams();
 
     useEffect(() => {
         async function getCourseInfo() {
@@ -38,7 +40,15 @@ const CourseOverview = () => {
         text = course?.scheduleData,
         html = converter.makeHtml(text);
 
-    console.log(course?.scheduleData);
+    useEffect(() => {
+        const weekNum = searchParams.get("week") ?? "";
+        const week = document.getElementsByClassName(weekNum)[0];
+        week?.scrollIntoView({
+            behavior: "auto",
+            block: "center",
+            inline: "center",
+        });
+    });
 
     return (
         <article className="course-overview">
