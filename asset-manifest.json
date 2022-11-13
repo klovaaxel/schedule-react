@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/schedule-react/static/css/main.130ffb2a.css",
-    "main.js": "/schedule-react/static/js/main.67bcd1c5.js",
+    "main.css": "/schedule-react/static/css/main.9cae1b59.css",
+    "main.js": "/schedule-react/static/js/main.b4a0a24c.js",
     "static/js/787.75d4c42a.chunk.js": "/schedule-react/static/js/787.75d4c42a.chunk.js",
     "service-worker.js": "/schedule-react/service-worker.js",
     "static/media/logo.svg": "/schedule-react/static/media/logo.8f5c3bd7ec05dd2b944e4a88c88eb9c1.svg",
     "index.html": "/schedule-react/index.html",
-    "main.130ffb2a.css.map": "/schedule-react/static/css/main.130ffb2a.css.map",
-    "main.67bcd1c5.js.map": "/schedule-react/static/js/main.67bcd1c5.js.map",
+    "main.9cae1b59.css.map": "/schedule-react/static/css/main.9cae1b59.css.map",
+    "main.b4a0a24c.js.map": "/schedule-react/static/js/main.b4a0a24c.js.map",
     "787.75d4c42a.chunk.js.map": "/schedule-react/static/js/787.75d4c42a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.130ffb2a.css",
-    "static/js/main.67bcd1c5.js"
+    "static/css/main.9cae1b59.css",
+    "static/js/main.b4a0a24c.js"
   ]
 }
