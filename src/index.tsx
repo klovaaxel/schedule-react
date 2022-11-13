@@ -1,14 +1,18 @@
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
 import App from "./app/App";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import ReactGA from "react-ga";
+import "./index.scss";
 import "./i18n";
 
 import { Provider } from "react-redux";
 import store from "./store/page-store";
+
+ReactGA.initialize("G-R91340SD8Y");
+ReactGA.pageview(window.location.pathname);
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
