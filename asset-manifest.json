@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/schedule-react/static/css/main.fb6aa6e8.css",
-    "main.js": "/schedule-react/static/js/main.8128e2b0.js",
+    "main.css": "/schedule-react/static/css/main.130ffb2a.css",
+    "main.js": "/schedule-react/static/js/main.d03cf022.js",
     "static/js/787.75d4c42a.chunk.js": "/schedule-react/static/js/787.75d4c42a.chunk.js",
     "service-worker.js": "/schedule-react/service-worker.js",
-    "static/media/logo.svg": "/schedule-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.svg": "/schedule-react/static/media/logo.8f5c3bd7ec05dd2b944e4a88c88eb9c1.svg",
     "index.html": "/schedule-react/index.html",
-    "main.fb6aa6e8.css.map": "/schedule-react/static/css/main.fb6aa6e8.css.map",
-    "main.8128e2b0.js.map": "/schedule-react/static/js/main.8128e2b0.js.map",
+    "main.130ffb2a.css.map": "/schedule-react/static/css/main.130ffb2a.css.map",
+    "main.d03cf022.js.map": "/schedule-react/static/js/main.d03cf022.js.map",
     "787.75d4c42a.chunk.js.map": "/schedule-react/static/js/787.75d4c42a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb6aa6e8.css",
-    "static/js/main.8128e2b0.js"
+    "static/css/main.130ffb2a.css",
+    "static/js/main.d03cf022.js"
   ]
 }
