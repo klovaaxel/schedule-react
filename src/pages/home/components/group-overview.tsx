@@ -18,19 +18,19 @@ const GroupOverview = (group: GroupModel) => {
                                     This weeks lesson plan is a mess and i dont
                                     like it
                                 </article>
-                                <aside className="assignments">
-                                    <Link
-                                        to={
-                                            "/course/" +
-                                            course.id +
-                                            "#" +
-                                            "Assignment?"
-                                        }
-                                    >
-                                        Im a Assingment
-                                    </Link>
-                                </aside>
                             </Link>
+                            <aside className="assignments">
+                                <Link
+                                    to={
+                                        "/course/" +
+                                        course.id +
+                                        "#" +
+                                        "Assignment?"
+                                    }
+                                >
+                                    Im a Assingment
+                                </Link>
+                            </aside>
                         </li>
                     );
                 })}

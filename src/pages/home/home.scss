@@ -46,47 +46,49 @@
             flex-grow: 1;
             flex-basis: 20rem;
 
+            transition: $transition-primary;
+
+            padding: 0.5rem 0rem;
+            margin: 0 0.5rem;
+
+            &:hover {
+                color: $color-primary-contrast;
+                background-color: $color-primary;
+                transition: $transition-primary;
+
+                padding: 0.5rem 0.5rem;
+                margin: 0 0;
+
+                .assignments {
+                    a {
+                        transition: $transition-primary;
+                        background-color: $color-primary-contrast;
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            .assignments {
+                display: flex;
+                flex-wrap: wrap;
+                a {
+                    color: unset;
+                    text-decoration: unset;
+
+                    background-color: $color-primary;
+                    color: $color-primary-contrast;
+
+                    display: block;
+                    padding: 0.2rem 0.5rem;
+                    margin: 0.5rem 0;
+                }
+            }
+
             & > a {
                 color: unset;
                 text-decoration: unset;
 
                 display: block;
-
-                transition: $transition-primary;
-
-                padding: 0.5rem 0rem;
-                margin: 0 0.5rem;
-
-                &:hover {
-                    color: $color-primary-contrast;
-                    background-color: $color-primary;
-
-                    padding: 0.5rem 0.5rem;
-                    margin: 0 0;
-
-                    .assignments {
-                        a {
-                            background-color: $color-primary-contrast;
-                            color: $color-primary;
-                        }
-                    }
-                }
-
-                .assignments {
-                    display: flex;
-                    flex-wrap: wrap;
-                    a {
-                        color: unset;
-                        text-decoration: unset;
-
-                        background-color: $color-primary;
-                        color: $color-primary-contrast;
-
-                        display: block;
-                        padding: 0.2rem 0.5rem;
-                        margin: 0.5rem 0;
-                    }
-                }
 
                 h3 {
                     margin-top: 0;
