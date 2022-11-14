@@ -7,6 +7,8 @@ import "react-widgets/scss/styles.scss";
 import CourseOverview from "../pages/course-overview/course-overview";
 import ExteralSite from "../pages/external/external";
 import ReactGA from "react-ga4";
+import { PrivacyPolicy } from "../pages/privacy-policy/privacy-policy";
+import Footer from "../components/footer/footer";
 
 function App() {
     ReactGA.initialize("G-R91340SD8Y");
@@ -21,8 +23,10 @@ function App() {
                     <Route path="about" element={<About />} />
                     <Route path="course/:id" element={<CourseOverview />} />
                     <Route path="external" element={<ExteralSite />} />
+                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 </Routes>
             </section>
+            <Footer />
         </div>
     );
 }
