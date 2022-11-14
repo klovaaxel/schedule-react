@@ -73,23 +73,23 @@ label {
     font-family: "Atkinson Hyperlegible";
     font-style: normal;
     font-weight: normal;
-    src: local("./resources/typography/AtkinsonHyperlegible-Regular.ttf");
+    src: url("./typography/AtkinsonHyperlegible-Regular.ttf");
 }
 @font-face {
     font-family: "Atkinson Hyperlegible";
     font-style: normal;
     font-weight: bold;
-    src: local("./resources/typography/AtkinsonHyperlegible-Bold.ttf");
+    src: url("./typography/AtkinsonHyperlegible-Bold.ttf");
 }
 @font-face {
     font-family: "Atkinson Hyperlegible";
     font-style: italic;
     font-weight: normal;
-    src: local("./resources/typography/AtkinsonHyperlegible-Italic.ttf");
+    src: url("./typography/AtkinsonHyperlegible-Italic.ttf");
 }
 @font-face {
     font-family: "Atkinson Hyperlegible";
     font-style: italic;
     font-weight: bold;
-    src: local("./resources/typography/AtkinsonHyperlegible-BoldItalic.ttf");
+    src: url("./typography/AtkinsonHyperlegible-BoldItalic.ttf");
 }
