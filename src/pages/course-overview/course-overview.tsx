@@ -48,14 +48,6 @@ const CourseOverview = () => {
 
     return (
         <article className="course-overview">
-            <Adsense
-                client="ca-pub-4836602045702579"
-                slot="7256118071"
-                style={{ display: "block" }}
-                layout="in-article"
-                format="auto"
-            />
-            ADS
             <section
                 dangerouslySetInnerHTML={{ __html: course?.scheduleData ?? "" }}
             ></section>
