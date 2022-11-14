@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
 import { GetCourse } from "../../objects/course/course-api";
 import { CourseModel } from "../../objects/course/course-model";
+import { Adsense } from "@ctrl/react-adsense";
 import "./course-overview.scss";
 
 const CourseOverview = () => {
@@ -47,6 +48,14 @@ const CourseOverview = () => {
 
     return (
         <article className="course-overview">
+            <Adsense
+                client="ca-pub-4836602045702579"
+                slot="7256118071"
+                style={{ display: "block" }}
+                layout="in-article"
+                format="auto"
+            />
+            ADS
             <section
                 dangerouslySetInnerHTML={{ __html: course?.scheduleData ?? "" }}
             ></section>

@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+.App:has(.page .external) footer {
+    display: none;
+}
+
 .page:has(.external) {
     margin: 0;
 }
