@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/schedule-react/static/css/main.cd4f874a.css",
-    "main.js": "/schedule-react/static/js/main.2e3586de.js",
+    "main.css": "/schedule-react/static/css/main.547526c1.css",
+    "main.js": "/schedule-react/static/js/main.3215cb77.js",
     "static/js/787.75d4c42a.chunk.js": "/schedule-react/static/js/787.75d4c42a.chunk.js",
     "service-worker.js": "/schedule-react/service-worker.js",
+    "static/media/AtkinsonHyperlegible-BoldItalic.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-BoldItalic.23edeb4cbf5a339bb951.ttf",
+    "static/media/AtkinsonHyperlegible-Bold.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-Bold.8dddb94b27fe0590f013.ttf",
+    "static/media/AtkinsonHyperlegible-Italic.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-Italic.3de101cf08a334567138.ttf",
+    "static/media/AtkinsonHyperlegible-Regular.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-Regular.b67275748172037676f3.ttf",
     "static/media/logo.svg": "/schedule-react/static/media/logo.8f5c3bd7ec05dd2b944e4a88c88eb9c1.svg",
     "index.html": "/schedule-react/index.html",
-    "main.cd4f874a.css.map": "/schedule-react/static/css/main.cd4f874a.css.map",
-    "main.2e3586de.js.map": "/schedule-react/static/js/main.2e3586de.js.map",
+    "main.547526c1.css.map": "/schedule-react/static/css/main.547526c1.css.map",
+    "main.3215cb77.js.map": "/schedule-react/static/js/main.3215cb77.js.map",
     "787.75d4c42a.chunk.js.map": "/schedule-react/static/js/787.75d4c42a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd4f874a.css",
-    "static/js/main.2e3586de.js"
+    "static/css/main.547526c1.css",
+    "static/js/main.3215cb77.js"
   ]
 }
