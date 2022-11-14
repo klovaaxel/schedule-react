@@ -28,29 +28,29 @@ const Navbar = () => {
 
             <nav className="pages">
                 <Link
-                    to="external?title=Skola24&url=https://web.skola24.se/timetable/timetable-viewer/stenungsund.skola24.se/Nösnäsgymnasiet/"
-                    className={currentPage === "about" ? "active" : ""}
+                    to="external?title=Schema&url=https://web.skola24.se/timetable/timetable-viewer/stenungsund.skola24.se/Nösnäsgymnasiet/"
+                    className={currentPage === "Schema" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faCalendarDays} />
                     <span>{t("navbar.link-titles.course-schedule")}</span>
                 </Link>
                 <Link
                     to="external?title=Matsedeln&url=https://www.skolmaten.se/nosnasgymnasiet/"
-                    className={currentPage === "food-schedule" ? "active" : ""}
+                    className={currentPage === "Matsedeln" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faUtensils} />
                     <span>{t("navbar.link-titles.food-schedule")}</span>
                 </Link>
                 <Link
-                    to="external?title=Matsedeln&url=https://stenungsund.skola24.se/"
-                    className={currentPage === "student-login" ? "active" : ""}
+                    to="external?title=Skola24&url=https://stenungsund.skola24.se/"
+                    className={currentPage === "Skola24" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faIdCard} />
                     <span>{t("navbar.link-titles.student-login")}</span>
                 </Link>
                 <Link
-                    to="external?title=Matsedeln&url=https://tcstenungsund.github.io/digital-signage/"
-                    className={currentPage === "student-info" ? "active" : ""}
+                    to="external?title=Info&url=https://tcstenungsund.github.io/digital-signage/"
+                    className={currentPage === "Info" ? "active" : ""}
                 >
                     <FontAwesomeIcon icon={faTv} />
                     <span>{t("navbar.link-titles.student-info")}</span>

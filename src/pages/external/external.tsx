@@ -21,7 +21,7 @@ const ExteralSite = () => {
             type: "CHANGE_PAGE",
             value: {
                 currentPageTitle: t(title),
-                currentPage: "external",
+                currentPage: title,
             },
         });
     });
