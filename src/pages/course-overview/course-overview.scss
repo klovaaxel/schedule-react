@@ -18,6 +18,13 @@
                 margin-right: -1rem;
                 padding: 0.5rem 1rem;
             }
+
+            &.selected:not(.current) {
+                border: 0.3rem solid $color-bg;
+                margin: 1rem -1rem;
+                padding: 0.5rem 1rem;
+            }
+
             h2 {
                 margin-top: 0.5rem;
             }

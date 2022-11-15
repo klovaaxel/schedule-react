@@ -39,6 +39,8 @@ const CourseOverview = () => {
     useEffect(() => {
         const weekNum = searchParams.get("week") ?? "";
         const week = document.getElementsByClassName(weekNum)[0];
+        week?.classList?.add("selected");
+
         week?.scrollIntoView({
             behavior: "auto",
             block: "center",

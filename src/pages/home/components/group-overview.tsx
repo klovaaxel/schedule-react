@@ -23,7 +23,7 @@ const GroupOverview = (props: props) => {
                 {group.courses?.map((course) => {
                     return (
                         <li key={course.id} className="course">
-                            <Link to={"/course/" + course.id + "?week=current"}>
+                            <Link to={"/course/" + course.id + "?week=" + week}>
                                 <h3>{course.name}</h3>
                                 <section
                                     className="schedule"
