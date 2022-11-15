@@ -12,6 +12,10 @@ export const GetCourseList = async () => {
     const courseList: ICourse[] = (await resolveJSON(response)) ?? null;
     const modelList: CourseModel[] = courseList.map((x) => new CourseModel(x));
 
+    for (const course of modelList) {
+        course.scheduleData = await GetSchedule(course.scheduleUrl);
+    }
+
     return modelList;
 };
 
@@ -52,8 +56,6 @@ export const GetSchedule = async (url: string) => {
     var showdown = require("showdown"),
         converter = new showdown.Converter(),
         html = converter.makeHtml(schedule);
-
-    console.log(html);
 
     return html;
 };

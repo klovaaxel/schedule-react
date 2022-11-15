@@ -73,6 +73,12 @@
                 }
             }
 
+            .schedule {
+                & > div h2:first-child {
+                    display: none;
+                }
+            }
+
             .assignments {
                 display: flex;
                 flex-wrap: wrap;

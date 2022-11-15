@@ -7,7 +7,7 @@ export class GroupModel {
     public gradYear: number | null;
     public courses: CourseModel[] | null;
 
-    constructor(data: IGroup) {
+    constructor(data: IGroup | null) {
         this.id = !!data && !!data.id ? data.id : "";
         this.enrollYear = !!data && !!data.enrollYear ? data.enrollYear : null;
         this.gradYear = !!data && !!data.gradYear ? data.gradYear : null;

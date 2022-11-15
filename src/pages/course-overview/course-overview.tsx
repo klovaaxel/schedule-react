@@ -52,6 +52,7 @@ const CourseOverview = () => {
                 dangerouslySetInnerHTML={{ __html: course?.scheduleData ?? "" }}
             ></section>
             <aside>
+                Ads here:
                 <Adsense
                     client="ca-pub-4836602045702579"
                     slot="7256118071"

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { getWeekNumber } from "../../../components/week-number";
+import { CourseModel } from "../../../objects/course/course-model";
 import { GroupModel } from "../../../objects/group/group-model";
 
 //import { useTranslation } from "react-i18next";
@@ -14,10 +16,12 @@ const GroupOverview = (group: GroupModel) => {
                         <li key={course.id} className="course">
                             <Link to={"/course/" + course.id + "?week=current"}>
                                 <h3>{course.name}</h3>
-                                <article className="schedule">
-                                    This weeks lesson plan is a mess and i dont
-                                    like it
-                                </article>
+                                <section
+                                    className="schedule"
+                                    dangerouslySetInnerHTML={{
+                                        __html: GetWeek(course),
+                                    }}
+                                ></section>
                             </Link>
                             <aside className="assignments">
                                 <Link
@@ -40,3 +44,21 @@ const GroupOverview = (group: GroupModel) => {
 };
 
 export default GroupOverview;
+
+const GetWeek = (course: CourseModel, weekNumber: number = getWeekNumber()) => {
+    const regEx = new RegExp(
+        `<div class="week ${weekNumber}[^"]*".*?div>`,
+        "gms"
+    );
+
+    const weekMatches = course.scheduleData.match(regEx) ?? [];
+    const week = weekMatches[0];
+
+    return week;
+};
+
+// course.scheduleData.match(
+//         new RegExp(
+//             `<div class="week 10[^"]*".*?div>`,
+//             "gms"
+//         )
