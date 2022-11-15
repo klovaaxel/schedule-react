@@ -19,7 +19,11 @@ export const GetCourseList = async () => {
     return modelList;
 };
 
-export const GetCourse = async (id: string) => {
+export const GetCourse = async (id: string | null | undefined) => {
+    if (id == null || id == undefined) {
+        return;
+    }
+
     // TODO : optimise : get single course data instead of all when asking for one
     const courseList: CourseModel[] = await GetCourseList();
     const course: CourseModel | null =

@@ -18,7 +18,7 @@ const CourseOverview = () => {
     useEffect(() => {
         async function getCourseInfo() {
             if (!course) {
-                const course = await GetCourse("weuweb01");
+                const course = await GetCourse(id);
                 setCourse(course ? course : new CourseModel(null));
             }
         }
