@@ -7,12 +7,16 @@ import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
 import GroupOverview from "./components/group-overview";
 import "./home.scss";
+import { getWeekNumber } from "../../components/week-number";
 
 export const Home = () => {
     const dispatch = useDispatch();
     const { t } = useTranslation();
 
     const [groups, setGroups] = useState<GroupModel[]>([]);
+    const [shownGroups, setShownGroups] = useState<GroupModel[]>([]);
+
+    const [week, setWeek] = useState<number>(getWeekNumber());
 
     // let isLoading: boolean = false;
 
@@ -32,6 +36,7 @@ export const Home = () => {
             if (groups.length <= 0) {
                 const groups = await GetGroupList();
                 setGroups(groups);
+                setShownGroups(groups);
             }
         };
 
@@ -56,8 +61,9 @@ export const Home = () => {
                             id="week-selector"
                             title={t("week-selector-tooltip")}
                             className="week selector"
-                            defaultValue="Yellow"
-                            data={["Red", "Yellow", "Blue", "Orange"]}
+                            defaultValue={getWeekNumber()}
+                            data={["42", "43", "44", "45"]}
+                            onChange={(week) => setWeek(parseInt(week))}
                         />
                     </span>
 
@@ -76,10 +82,12 @@ export const Home = () => {
             </header>
             <section className="groups">
                 <ul>
-                    {groups.map((group) => {
+                    {shownGroups.map((group) => {
                         return (
                             <li key={group.id}>
-                                <GroupOverview {...group} />
+                                <GroupOverview
+                                    {...{ group: group, week: week }}
+                                />
                             </li>
                         );
                     })}

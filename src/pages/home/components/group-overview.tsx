@@ -1,11 +1,20 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getWeekNumber } from "../../../components/week-number";
 import { CourseModel } from "../../../objects/course/course-model";
 import { GroupModel } from "../../../objects/group/group-model";
 
+interface props {
+    group: GroupModel;
+    week?: number;
+}
+
 //import { useTranslation } from "react-i18next";
-const GroupOverview = (group: GroupModel) => {
+const GroupOverview = (props: props) => {
     //const { t } = useTranslation();
+
+    const group = props.group;
+    const week = props.week ?? getWeekNumber();
 
     return (
         <section className="group">
@@ -19,7 +28,7 @@ const GroupOverview = (group: GroupModel) => {
                                 <section
                                     className="schedule"
                                     dangerouslySetInnerHTML={{
-                                        __html: GetWeek(course),
+                                        __html: GetWeek(course, week),
                                     }}
                                 ></section>
                             </Link>
@@ -45,7 +54,7 @@ const GroupOverview = (group: GroupModel) => {
 
 export default GroupOverview;
 
-const GetWeek = (course: CourseModel, weekNumber: number = getWeekNumber()) => {
+const GetWeek = (course: CourseModel, weekNumber: number) => {
     const regEx = new RegExp(
         `<div class="week ${weekNumber}[^"]*".*?div>`,
         "gms"
@@ -56,9 +65,3 @@ const GetWeek = (course: CourseModel, weekNumber: number = getWeekNumber()) => {
 
     return week;
 };
-
-// course.scheduleData.match(
-//         new RegExp(
-//             `<div class="week 10[^"]*".*?div>`,
-//             "gms"
-//         )
