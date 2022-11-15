@@ -40,7 +40,8 @@ export const GetSchedule = async (url: string) => {
 
     // TODO: Clean up this mess...
     const weeks =
-        (schedule + "DOCEND").match(/\n##(.+?(?=\n##)|.+?(?=DOCEND))/gms) ?? [];
+        (schedule + "DOCEND").match(/\n##(.+?(?=\n##[^#])|.+?(?=DOCEND))/gms) ??
+        [];
 
     for (const week of weeks) {
         const weekNumMatch = /(##[^0-9,\n]*)(\d{1,2})/g.exec(week);
