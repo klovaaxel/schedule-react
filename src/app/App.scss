@@ -8,10 +8,16 @@ $color-bg: #deebf1;
 $color-primary: #4789c6;
 $color-primary-contrast: #fff;
 $color-secondary: #dead40;
+$color-text: #000000;
+$color-text-contrast: #ffffff;
 
 $transition-primary: 0.2s;
 
 $shadow-default: rgba(100, 100, 111, 0.05) 0px 7px 29px 0px;
+
+:root {
+    color: $color-text;
+}
 
 * {
     font-family: $font-family;
@@ -65,8 +71,26 @@ label {
     }
 }
 
+button {
+    border: none;
+    color: $color-primary-contrast;
+    background-color: $color-primary;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+}
+
 .page {
     margin: 0 1.5rem;
+}
+
+a[href],
+input[type="submit"],
+input[type="image"],
+label[for],
+select,
+button,
+.pointer {
+    cursor: pointer !important;
 }
 
 @font-face {

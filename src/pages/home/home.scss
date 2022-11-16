@@ -71,11 +71,52 @@
                         color: $color-primary;
                     }
                 }
+                .schedule {
+                    &.has-overflow::before {
+                        transition: $transition-primary;
+                        box-shadow: inset 0 -10rem 6rem -6rem $color-primary !important;
+                    }
+                    & > button {
+                        color: $color-primary;
+                        background-color: $color-primary-contrast;
+                    }
+                }
             }
 
             .schedule {
+                max-height: 25rem;
+                position: relative;
+                overflow: hidden;
+
+                &.has-overflow::before {
+                    transition: $transition-primary;
+
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    box-shadow: inset 0 -10rem 6rem -6rem $color-bg;
+                }
+
                 & > div h2:first-child {
                     display: none;
+                }
+
+                & > button {
+                    transition: $transition-primary;
+
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 40%;
+                    right: 40%;
+
+                    cursor: default;
+                }
+
+                img {
+                    max-width: 100%;
                 }
             }
 
