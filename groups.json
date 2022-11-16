@@ -5,10 +5,13 @@
         "gradYear": 2023,
         "courses": [
             {
-                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb02"
             },
             {
-                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb02"
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#nainar01"
+            },
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#nainae01"
             }
         ]
     },
@@ -21,7 +24,26 @@
                 "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb01"
             },
             {
-                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb02"
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#tektek00s1"
+            },
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#daodac01"
+            }
+        ]
+    },
+    {
+        "id": "22te4i",
+        "enrollYear": 2022,
+        "gradYear": 2023,
+        "courses": [
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#weuweb33"
+            },
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#tektek00s2"
+            },
+            {
+                "@ref": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json#prrprr02"
             }
         ]
     }
