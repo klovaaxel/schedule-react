@@ -42,6 +42,11 @@ export const Home = () => {
 
         doAsync();
 
+        // isLoading = false;
+    });
+
+    // Add read more to long week plans
+    useEffect(() => {
         const schedules = document.getElementsByClassName("schedule");
 
         const readMoreButton = document.createElement("button");
@@ -51,16 +56,9 @@ export const Home = () => {
             const schedule = schedules[i];
             if (schedule.scrollHeight > schedule.clientHeight) {
                 schedule.classList.add("has-overflow");
-
-                console.log(readMoreButton);
-
                 schedule.appendChild(readMoreButton.cloneNode(true));
-
-                console.log(schedule);
             }
         }
-
-        // isLoading = false;
     });
 
     return (
