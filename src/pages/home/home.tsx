@@ -74,8 +74,21 @@ export const Home = () => {
                         <DropdownList
                             id="group-selector"
                             className="group selector"
-                            defaultValue="Yellow"
-                            data={["Red", "Yellow", "Blue", "Orange"]}
+                            defaultValue={t("all-groups")}
+                            data={groups
+                                .map((g) => g.id)
+                                .concat([t("all-groups")])}
+                            onChange={(groupId) =>
+                                setShownGroups(
+                                    groupId != t("all-groups")
+                                        ? [
+                                              groups.find(
+                                                  (g) => g.id === groupId
+                                              ) ?? new GroupModel(null),
+                                          ]
+                                        : groups
+                                )
+                            }
                         />
                     </span>
                 </nav>
