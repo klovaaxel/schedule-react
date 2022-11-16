@@ -56,7 +56,7 @@ export const Home = () => {
             const schedule = schedules[i];
             if (schedule.scrollHeight > schedule.clientHeight) {
                 schedule.classList.add("has-overflow");
-                schedule.appendChild(readMoreButton.cloneNode(true));
+                // schedule.appendChild(readMoreButton.cloneNode(true));
             }
         }
     });
