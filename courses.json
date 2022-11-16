@@ -2,56 +2,56 @@
     {
         "id": "weuweb01",
         "name": "Webuteckling 1",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/weuweb01-21tei.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb01-21tei.md"
     },
     {
         "id": "weuweb02",
         "name": "Webuteckling 2",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/weuweb02-20tei.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb02-20tei.md"
     },
     {
         "id": "weuweb03",
         "name": "Webuteckling 3",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/weuweb33-22te4i.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb33-22te4i.md"
     },
     
     {
         "id": "daodac01",
         "name": "Dator- och nätverksteknik 1",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/weuweb33-22te4i.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/weuweb33-22te4i.md"
     },
     
     {
         "id": "nainar01",
         "name": "Nätverksadministration",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/nainar01-20tei.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/nainar01-20tei.md"
     },
     {
         "id": "nainae01",
         "name": "Nätverkssäkerhet",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/nainae0-ind.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/nainae0-ind.md"
     },
     
     {
         "id": "gyngym01",
         "name": "Gymnasiearbete",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/gymgym01-20tei.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/gymgym01-20tei.md"
     },
     
     {
         "id": "prrprr02",
         "name": "Programmering 2",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/prrprr02-22te4i.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/prrprr02-22te4i.md"
     },
     
     {
         "id": "tektek00s1",
         "name": "Teknik – specialisering",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/tektek00s-21tei.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/tektek00s-21tei.md"
     },
     {
         "id": "tektek00s2",
         "name": "Teknik – specialisering",
-        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/blob/main/md/tektek00s-22te4i.md"
+        "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/tektek00s-22te4i.md"
     },
 ]
