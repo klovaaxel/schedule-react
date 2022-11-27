@@ -23,6 +23,7 @@ const CourseOverview = () => {
                 const course = await GetCourse(id);
                 setCourse(course ? course : new CourseModel(null));
             }
+            setIsLoading(false);
         }
 
         getCourseInfo();
@@ -44,8 +45,6 @@ const CourseOverview = () => {
             block: "center",
             inline: "center",
         });
-
-        setIsLoading(false);
     });
 
     return (
