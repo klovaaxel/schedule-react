@@ -8,21 +8,19 @@ import DropdownList from "react-widgets/DropdownList";
 import GroupOverview from "./components/group-overview";
 import "./home.scss";
 import { getWeekNumber } from "../../components/week-number";
+import Spinner from "../../components/loading-spinner/loading-spinner";
 
 export const Home = () => {
     const dispatch = useDispatch();
     const { t } = useTranslation();
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const [groups, setGroups] = useState<GroupModel[]>([]);
     const [shownGroups, setShownGroups] = useState<GroupModel[]>([]);
 
     const [week, setWeek] = useState<number>(getWeekNumber());
 
-    // let isLoading: boolean = false;
-
     useEffect(() => {
-        // isLoading = true;
-
         dispatch({
             type: "CHANGE_PAGE",
             value: {
@@ -37,16 +35,13 @@ export const Home = () => {
                 const groups = await GetGroupList();
                 setGroups(groups);
                 setShownGroups(groups);
+                setIsLoading(false);
             }
         };
 
         doAsync();
 
-        // isLoading = false;
-    });
-
-    // Add read more to long week plans
-    useEffect(() => {
+        // Add read more to long week plans
         const schedules = document.getElementsByClassName("schedule");
 
         const readMoreButton = document.createElement("button");
@@ -63,6 +58,7 @@ export const Home = () => {
 
     return (
         <main className="home-page">
+            {isLoading ? <Spinner></Spinner> : null}
             <aside>
                 <Link to="/about">About</Link>
                 <Link to="/course/17tei">Course</Link>

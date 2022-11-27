@@ -7,10 +7,12 @@ import { GetCourse } from "../../objects/course/course-api";
 import { CourseModel } from "../../objects/course/course-model";
 import { Adsense } from "@ctrl/react-adsense";
 import "./course-overview.scss";
+import Spinner from "../../components/loading-spinner/loading-spinner";
 
 const CourseOverview = () => {
     const dispatch = useDispatch();
     //const { t } = useTranslation();
+    const [isLoading, setIsLoading] = useState<boolean>(true);
     const { id } = useParams();
     const [course, setCourse] = useState<CourseModel>();
     const [searchParams] = useSearchParams();
@@ -24,9 +26,7 @@ const CourseOverview = () => {
         }
 
         getCourseInfo();
-    });
 
-    useEffect(() => {
         dispatch({
             type: "CHANGE_PAGE",
             value: {
@@ -34,9 +34,7 @@ const CourseOverview = () => {
                 currentPage: `course-${id}`,
             },
         });
-    });
 
-    useEffect(() => {
         const weekNum = searchParams.get("week") ?? "";
         const week = document.getElementsByClassName(weekNum)[0];
         week?.classList?.add("selected");
@@ -46,10 +44,13 @@ const CourseOverview = () => {
             block: "center",
             inline: "center",
         });
+
+        setIsLoading(false);
     });
 
     return (
         <article className="course-overview">
+            {isLoading ? <Spinner></Spinner> : null}
             <section
                 dangerouslySetInnerHTML={{ __html: course?.scheduleData ?? "" }}
             ></section>
