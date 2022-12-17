@@ -24,7 +24,9 @@ const Navbar = () => {
                 <img src={logo} alt="App-Logo" />
             </Link>
 
-            <h2 className="page-title">{pageTitle}</h2>
+            <h2 className="page-title">
+                {pageTitle !== "undefined" ? pageTitle : ""}
+            </h2>
 
             <nav className="pages">
                 <Link

@@ -40,24 +40,10 @@ export default function SchedulesOverview() {
         };
 
         doAsync();
-
-        // Add read more to long week plans
-        const schedules = document.getElementsByClassName("schedule");
-
-        const readMoreButton = document.createElement("button");
-        readMoreButton.innerText = t("read-more");
-
-        for (let i = 0; i < schedules.length; i++) {
-            const schedule = schedules[i];
-            if (schedule.scrollHeight > schedule.clientHeight) {
-                schedule.classList.add("has-overflow");
-                // schedule.appendChild(readMoreButton.cloneNode(true));
-            }
-        }
     });
 
     return (
-        <main className="home-page">
+        <main className="schedules-overview">
             {isLoading ? <Spinner></Spinner> : null}
             <aside>
                 <Link to="/about">About</Link>
@@ -119,9 +105,6 @@ export default function SchedulesOverview() {
                     })}
                 </ul>
             </section>
-            <aside>
-                <h2>{t("assignments")}</h2>
-            </aside>
         </main>
     );
 }

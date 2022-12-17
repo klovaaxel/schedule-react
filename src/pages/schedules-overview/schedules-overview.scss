@@ -1,6 +1,9 @@
 @import "../../app/App.scss";
 
-.home-page {
+.schedules-overview {
+    max-width: 90em;
+    margin: 0 auto;
+
     header {
         nav {
             display: flex;
@@ -73,9 +76,9 @@
                     }
                 }
                 .schedule {
-                    &.has-overflow::before {
+                    &::before {
                         transition: $transition-primary;
-                        box-shadow: inset 0 -10rem 6rem -6rem $color-primary !important;
+                        box-shadow: inset 0 -15rem 6rem -6rem $color-primary !important;
                     }
                     & > button {
                         color: $color-primary;
@@ -89,16 +92,16 @@
                 position: relative;
                 overflow: hidden;
 
-                &.has-overflow::before {
+                &::before {
                     transition: $transition-primary;
 
                     content: "";
                     width: 100%;
-                    height: 100%;
+                    height: 25rem;
 
                     position: absolute;
 
-                    box-shadow: inset 0 -10rem 6rem -6rem $color-bg;
+                    box-shadow: inset 0 -15rem 6rem -6rem $color-bg;
                 }
 
                 & > div h2:first-child {
