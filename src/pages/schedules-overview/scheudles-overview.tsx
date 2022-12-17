@@ -6,11 +6,11 @@ import { GetGroupList } from "../../objects/group/group-api";
 import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
 import GroupOverview from "./components/group-overview";
-import "./home.scss";
+import "./schedules-overview.scss";
 import { getWeekNumber } from "../../components/week-number";
 import Spinner from "../../components/loading-spinner/loading-spinner";
 
-export const Home = () => {
+export default function SchedulesOverview() {
     const dispatch = useDispatch();
     const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -25,7 +25,7 @@ export const Home = () => {
             type: "CHANGE_PAGE",
             value: {
                 currentPageTitle: "TC-Stenugnsund",
-                currentPage: "home",
+                currentPage: "schedule-overview",
             },
         });
 
@@ -124,4 +124,4 @@ export const Home = () => {
             </aside>
         </main>
     );
-};
+}
