@@ -24,7 +24,7 @@ const ExteralSite = () => {
                 currentPage: title,
             },
         });
-    });
+    }, [dispatch, t, title, searchParams]);
 
     return (
         <section className="external">

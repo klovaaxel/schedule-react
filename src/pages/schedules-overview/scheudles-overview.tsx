@@ -28,7 +28,9 @@ export default function SchedulesOverview() {
                 currentPage: "schedule-overview",
             },
         });
+    }, [groups, dispatch]);
 
+    useEffect(() => {
         const doAsync = async () => {
             //If groups are missing get groups
             if (groups.length <= 0) {
@@ -40,7 +42,7 @@ export default function SchedulesOverview() {
         };
 
         doAsync();
-    });
+    }, [groups, shownGroups]);
 
     return (
         <main className="schedules-overview">
@@ -79,7 +81,7 @@ export default function SchedulesOverview() {
                                 .concat([t("all-groups")])}
                             onChange={(groupId) =>
                                 setShownGroups(
-                                    groupId != t("all-groups")
+                                    groupId !== t("all-groups")
                                         ? [
                                               groups.find(
                                                   (g) => g.id === groupId

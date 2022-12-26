@@ -1,0 +1,9 @@
+@import "../../app/App.scss";
+
+.page > .assignment {
+    button.back {
+        @media screen and (min-width: $medium-screen) {
+            position: fixed;
+        }
+    }
+}

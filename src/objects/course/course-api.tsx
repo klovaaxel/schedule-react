@@ -20,7 +20,7 @@ export const GetCourseList = async () => {
 };
 
 export const GetCourse = async (id: string | null | undefined) => {
-    if (id == null || id == undefined) {
+    if (id == null || id === undefined) {
         return;
     }
 

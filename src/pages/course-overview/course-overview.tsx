@@ -18,6 +18,16 @@ const CourseOverview = () => {
     const [searchParams] = useSearchParams();
 
     useEffect(() => {
+        dispatch({
+            type: "CHANGE_PAGE",
+            value: {
+                currentPageTitle: `${course?.name}`,
+                currentPage: `course-${id}`,
+            },
+        });
+    }, [course, dispatch, id]);
+
+    useEffect(() => {
         async function getCourseInfo() {
             if (!course) {
                 const course = await GetCourse(id);
@@ -27,15 +37,9 @@ const CourseOverview = () => {
         }
 
         getCourseInfo();
+    }, [id, course]);
 
-        dispatch({
-            type: "CHANGE_PAGE",
-            value: {
-                currentPageTitle: `${course?.name}`,
-                currentPage: `course-${id}`,
-            },
-        });
-
+    useEffect(() => {
         const weekNum = searchParams.get("week") ?? "";
         const week = document.getElementsByClassName(weekNum)[0];
         week?.classList?.add("selected");
@@ -45,7 +49,7 @@ const CourseOverview = () => {
             block: "center",
             inline: "center",
         });
-    });
+    }, [course, searchParams]);
 
     return (
         <article className="course-overview">

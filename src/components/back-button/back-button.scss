@@ -1,0 +1,17 @@
+@import "../../app/App.scss";
+
+button.back {
+    margin: 0 1rem;
+
+    transition: $transition-primary;
+
+    &:hover {
+        margin: 0 0;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    span {
+        margin: 1rem;
+    }
+}
