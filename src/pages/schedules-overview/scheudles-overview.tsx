@@ -9,6 +9,7 @@ import GroupOverview from "./components/group-overview";
 import "./schedules-overview.scss";
 import { getWeekNumber } from "../../components/week-number";
 import Spinner from "../../components/loading-spinner/loading-spinner";
+import GetSettings from "../../objects/general/settings-api";
 
 export default function SchedulesOverview() {
     const dispatch = useDispatch();
@@ -19,6 +20,7 @@ export default function SchedulesOverview() {
     const [shownGroups, setShownGroups] = useState<GroupModel[]>([]);
 
     const [week, setWeek] = useState<number>(getWeekNumber());
+    const [schoolWeeks, setSchoolWeeks] = useState<number[]>();
 
     useEffect(() => {
         dispatch({
@@ -44,6 +46,15 @@ export default function SchedulesOverview() {
         doAsync();
     }, [groups, shownGroups]);
 
+    useEffect(() => {
+        const doAsync = async () => {
+            const settings = await GetSettings();
+            setSchoolWeeks(settings.schoolWeeks);
+        };
+
+        doAsync();
+    });
+
     return (
         <main className="schedules-overview">
             {isLoading ? <Spinner></Spinner> : null}
@@ -63,8 +74,8 @@ export default function SchedulesOverview() {
                             title={t("week-selector-tooltip")}
                             className="week selector"
                             defaultValue={getWeekNumber()}
-                            data={["42", "43", "44", "45"]}
-                            onChange={(week) => setWeek(parseInt(week))}
+                            data={schoolWeeks}
+                            onChange={(week) => setWeek(week)}
                         />
                     </span>
 
