@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { GetGroupList } from "../../objects/group/group-api";
 import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
@@ -58,10 +57,6 @@ export default function SchedulesOverview() {
     return (
         <main className="schedules-overview">
             {isLoading ? <Spinner></Spinner> : null}
-            <aside>
-                <Link to="/about">About</Link>
-                <Link to="/course/17tei">Course</Link>
-            </aside>
             <header>
                 <h1 className="page-title">{t("schedule")}</h1>
                 <nav>
