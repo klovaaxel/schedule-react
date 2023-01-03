@@ -1,4 +1,3 @@
-import ICourse from "../course/course-interface";
 import { CourseModel } from "../course/course-model";
 
 interface IGroup {
