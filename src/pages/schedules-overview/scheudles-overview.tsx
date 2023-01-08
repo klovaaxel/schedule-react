@@ -6,9 +6,10 @@ import { GroupModel } from "../../objects/group/group-model";
 import DropdownList from "react-widgets/DropdownList";
 import GroupOverview from "./components/group-overview";
 import "./schedules-overview.scss";
-import { getWeekNumber } from "../../components/week-number";
+import { GetWeekNumber } from "../../components/week-number";
 import Spinner from "../../components/loading-spinner/loading-spinner";
 import GetSettings from "../../objects/general/settings-api";
+import { useQuery } from "react-query";
 
 export default function SchedulesOverview() {
     const dispatch = useDispatch();
@@ -18,8 +19,8 @@ export default function SchedulesOverview() {
     const [groups, setGroups] = useState<GroupModel[]>([]);
     const [shownGroups, setShownGroups] = useState<GroupModel[]>([]);
 
-    const [week, setWeek] = useState<number>(getWeekNumber());
-    const [schoolWeeks, setSchoolWeeks] = useState<number[]>();
+    const [week, setWeek] = useState<number>(GetWeekNumber());
+    const { data: settings } = useQuery(["settings"], GetSettings);
 
     useEffect(() => {
         dispatch({
@@ -45,15 +46,6 @@ export default function SchedulesOverview() {
         doAsync();
     }, [groups, shownGroups]);
 
-    useEffect(() => {
-        const doAsync = async () => {
-            const settings = await GetSettings();
-            setSchoolWeeks(settings.schoolWeeks);
-        };
-
-        doAsync();
-    });
-
     return (
         <main className="schedules-overview">
             {isLoading ? <Spinner></Spinner> : null}
@@ -68,8 +60,8 @@ export default function SchedulesOverview() {
                             id="week-selector"
                             title={t("week-selector-tooltip")}
                             className="week selector"
-                            defaultValue={getWeekNumber()}
-                            data={schoolWeeks}
+                            defaultValue={GetWeekNumber()}
+                            data={settings?.schoolWeeks}
                             onChange={(week) => setWeek(week)}
                         />
                     </span>

@@ -1,4 +1,4 @@
-export function getWeekNumber(date = new Date()) {
+export function GetWeekNumber(date = new Date()) {
     date.setHours(0, 0, 0, 0);
     // Thursday in current week decides the year.
     date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));

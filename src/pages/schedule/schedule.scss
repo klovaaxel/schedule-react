@@ -1,0 +1,38 @@
+@import "../../app/App.scss";
+
+.page .schedule {
+    margin: 0 auto;
+    max-width: 80ch;
+    img {
+        max-width: 100%;
+    }
+    & > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        & > li {
+            display: block;
+            margin: 3rem 0;
+
+            overflow-x: auto;
+
+            &.current {
+                background-color: $color-bg;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            &.selected:not(.current) {
+                border: 0.3rem solid $color-bg;
+                margin: 1rem -1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            h2 {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

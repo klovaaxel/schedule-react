@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { getWeekNumber } from "../../../components/week-number";
+import { GetWeekNumber } from "../../../components/week-number";
 import { CourseModel } from "../../../objects/course/course-model";
 import { GroupModel } from "../../../objects/group/group-model";
 
@@ -14,7 +14,7 @@ const GroupOverview = (props: props) => {
     //const { t } = useTranslation();
 
     const group = props.group;
-    const week = props.week ?? getWeekNumber();
+    const week = props.week ?? GetWeekNumber();
 
     return (
         <section className="group">
@@ -23,7 +23,19 @@ const GroupOverview = (props: props) => {
                 {group.courses?.map((course) => {
                     return (
                         <li key={course.id} className="course">
-                            <Link to={"/course/" + course.id + "?week=" + week}>
+                            <Link
+                                to={
+                                    course.scheduleUrl.endsWith(".md")
+                                        ? "/course/" +
+                                          course.id +
+                                          "?week=" +
+                                          week
+                                        : "beta/course/" +
+                                          course.id +
+                                          "?week=" +
+                                          week
+                                }
+                            >
                                 <h3>{course.name}</h3>
                                 <section
                                     className="schedule"
@@ -35,10 +47,15 @@ const GroupOverview = (props: props) => {
                             <aside className="assignments">
                                 <Link
                                     to={
-                                        "/course/" +
-                                        course.id +
-                                        "#" +
-                                        "Assignment?"
+                                        course.scheduleUrl.includes(".md")
+                                            ? "/course/" +
+                                              course.id +
+                                              "#" +
+                                              "Assignment?"
+                                            : "/beta/course/" +
+                                              course.id +
+                                              "#" +
+                                              "Assignment?"
                                     }
                                 >
                                     Im a Assingment

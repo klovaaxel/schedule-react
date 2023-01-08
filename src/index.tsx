@@ -9,15 +9,21 @@ import "./i18n";
 
 import { Provider } from "react-redux";
 import store from "./store/page-store";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+// Create a client
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
     <BrowserRouter basename="/schedule-react">
-        <Provider store={store}>
-            <App />
-        </Provider>
+        <QueryClientProvider client={queryClient}>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </QueryClientProvider>
     </BrowserRouter>
 );
 

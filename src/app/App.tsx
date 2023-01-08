@@ -9,6 +9,7 @@ import { PrivacyPolicy } from "../pages/privacy-policy/privacy-policy";
 import Footer from "../components/footer/footer";
 import SchedulesOverview from "../pages/schedules-overview/scheudles-overview";
 import Assignment from "../pages/assignment/assignment";
+import { Schedule } from "../pages/schedule/schedule";
 
 function App() {
     ReactGA.initialize("G-R91340SD8Y");
@@ -21,6 +22,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<SchedulesOverview />} />
                     <Route path="course/:id" element={<CourseOverview />} />
+                    <Route path="beta/course/:id" element={<Schedule />} />
                     <Route path="external" element={<ExteralSite />} />
                     <Route path="privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="assignment" element={<Assignment />} />

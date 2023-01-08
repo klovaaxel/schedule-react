@@ -1,0 +1,33 @@
+@import "../../app/App.scss";
+
+.course-overview {
+    img {
+        max-width: 100%;
+    }
+    & > section {
+        max-width: 65ch;
+        margin: 0 auto;
+
+        .week {
+            display: block;
+            margin: 3rem 0;
+
+            &.current {
+                background-color: $color-bg;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            &.selected:not(.current) {
+                border: 0.3rem solid $color-bg;
+                margin: 1rem -1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            h2 {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

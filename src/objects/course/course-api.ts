@@ -1,10 +1,10 @@
 import resolveJSON from "../../components/resolve-json";
-import { getWeekNumber } from "../../components/week-number";
+import { GetWeekNumber } from "../../components/week-number";
 import ICourse from "./course-interface";
 import { CourseModel } from "./course-model";
 
 export const GetCourseList = async () => {
-    const request = await window.fetch(
+    const request = await fetch(
         "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/courses.json"
     );
 
@@ -48,7 +48,7 @@ export const GetSchedule = async (url: string) => {
         const weekNum = weekNumMatch ? weekNumMatch[2] : "";
 
         const tagStart = `<div class="week ${weekNum}${
-            weekNum === getWeekNumber().toString() ? " current" : ""
+            weekNum === GetWeekNumber().toString() ? " current" : ""
         }" markdown="1">`;
 
         const tagEnd = `</div>\n\n`;
