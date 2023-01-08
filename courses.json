@@ -55,7 +55,7 @@
         "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/tektek00s-22te4i.md"
     },
     {
-        "id": "tets",
+        "id": "test",
         "name": "Test Course",
         "scheduleUrl": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/schedules/testschedule.json"
     }
