@@ -53,5 +53,10 @@
         "id": "tektek00s2",
         "name": "Teknik – specialisering",
         "scheduleUrl": "https://raw.githubusercontent.com/tcstenungsund/schedule/main/md/tektek00s-22te4i.md"
+    },
+    {
+        "id": "tets",
+        "name": "Test Course",
+        "scheduleUrl": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/schedules/testschedule.json"
     }
 ]
