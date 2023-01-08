@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 //import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -47,7 +47,7 @@ export function Schedule() {
     }, [schedule, dispatch, id]);
 
     // Scroll selected or current week into view
-    useEffect(() => {
+    useLayoutEffect(() => {
         const selectedWeek = document.querySelector(
             `li[data-week="${searchParams.get("week") ?? ""}"]`
         );
@@ -65,7 +65,7 @@ export function Schedule() {
                 inline: "center",
             });
         }
-    }, [schedule, searchParams]);
+    }, [schedule, scheduleStatus, searchParams]);
 
     return (
         <article className="schedule">
