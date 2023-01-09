@@ -6,7 +6,7 @@ export interface ISchedule {
 
 export interface IPost {
     id: string;
-    sequenceNumber: number;
+    week: number;
     title: string;
     content: string;
 }

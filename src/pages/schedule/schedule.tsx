@@ -74,7 +74,7 @@ export function Schedule() {
                     <h1>{schedule?.name}</h1>
                     <ul>
                         {schedule?.posts.map((post: IPost) => (
-                            <li key={post.id} data-week={post.sequenceNumber}>
+                            <li key={post.id} data-week={post.week}>
                                 <Post post={post} />
                             </li>
                         ))}
