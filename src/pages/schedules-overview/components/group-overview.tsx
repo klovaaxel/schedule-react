@@ -1,8 +1,10 @@
-import { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { GetWeekNumber } from "../../../components/week-number";
 import { CourseModel } from "../../../objects/course/course-model";
 import { GroupModel } from "../../../objects/group/group-model";
+import { GetScehdule } from "../../../objects/schedule/schedule-api";
 
 interface props {
     group: GroupModel;
@@ -15,6 +17,16 @@ const GroupOverview = (props: props) => {
 
     const group = props.group;
     const week = props.week ?? GetWeekNumber();
+
+    function GetWeekV2(course: CourseModel, weekNumber: number): string {
+        const { data: schedule } = useQuery(
+            [`schedule-${course.id}`, course.scheduleUrl],
+            GetScehdule
+        );
+
+        const markdown = schedule?.posts.find((w) => w.week === week)?.content;
+        return markdown ?? "";
+    }
 
     return (
         <section className="group">
@@ -37,12 +49,18 @@ const GroupOverview = (props: props) => {
                                 }
                             >
                                 <h3>{course.name}</h3>
-                                <section
-                                    className="schedule"
-                                    dangerouslySetInnerHTML={{
-                                        __html: GetWeek(course, week),
-                                    }}
-                                ></section>
+                                {course.scheduleUrl.endsWith(".md") ? (
+                                    <section
+                                        className="schedule"
+                                        dangerouslySetInnerHTML={{
+                                            __html: GetWeek(course, week),
+                                        }}
+                                    ></section>
+                                ) : (
+                                    <ReactMarkdown>
+                                        {GetWeekV2(course, week)}
+                                    </ReactMarkdown>
+                                )}
                             </Link>
                             <aside className="assignments">
                                 <Link
