@@ -9,7 +9,7 @@ weuweb01
 9b3610b0-62a5-4697-a8e3-b3286814ac54
 <!-- assignments -->
 - Min Fula Lilla Sida
-<!-- content  -->
+<!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
 <!-- week 33 -->
@@ -18,7 +18,7 @@ Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 9b3610b0-62a5-4697-a8e3-b3286814ac53
 <!-- assignments -->
 - Min Fula Lilla Sida
-<!-- content  -->
+<!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
 Genomg[ng av 30 CSS Selectors you should know
@@ -29,7 +29,7 @@ Genomg[ng av 30 CSS Selectors you should know
 9b3610b0-62a5-4697-a8e3-b3286814ac52
 <!-- assignments -->
 - Min Fula Lilla Sida
-<!-- content  -->
+<!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
 Genomg[ng av 30 CSS Selectors you should know
@@ -40,7 +40,7 @@ Genomg[ng av 30 CSS Selectors you should know
 9b3610b0-62a5-4697-a8e3-b3286814ac51
 <!-- assignments -->
 - Min Fula Lilla Sida
-<!-- content  -->
+<!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
 Genomg[ng av 30 CSS Selectors you should know
