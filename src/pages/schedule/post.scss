@@ -1,0 +1,17 @@
+@import "../../app/App.scss";
+
+.post {
+    .edit {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            height: 20rem;
+            border: 0.2rem solid $color-bg;
+
+            &:is(:hover, :active, :focus) {
+                border-color: $color-primary;
+            }
+        }
+    }
+}

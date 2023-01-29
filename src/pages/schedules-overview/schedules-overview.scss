@@ -41,19 +41,38 @@
 
                 display: flex;
                 flex-wrap: wrap;
-                align-items: flex-start;
+                align-items: stretch;
                 gap: 1rem;
             }
         }
         .course {
             max-width: 100%;
+            height: 20rem;
             flex-grow: 1;
             flex-basis: 20rem;
+
+            position: relative;
+
+            overflow: hidden;
 
             transition: $transition-primary;
 
             padding: 1.5rem 0rem;
             margin: 0 1.5rem;
+
+            & > a::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: $transition-primary;
+                box-shadow: inset 0 -15rem 6rem -6rem $color-bg !important;
+            }
+            & > a:hover::before {
+                transition: $transition-primary;
+                box-shadow: inset 0 -15rem 6rem -6rem $color-primary !important;
+            }
 
             img {
                 max-width: 100%;
@@ -84,10 +103,6 @@
                     }
                 }
                 .schedule {
-                    &::before {
-                        transition: $transition-primary;
-                        box-shadow: inset 0 -15rem 6rem -6rem $color-primary !important;
-                    }
                     & > button {
                         color: $color-primary;
                         background-color: $color-primary-contrast;
@@ -96,22 +111,6 @@
             }
 
             .schedule {
-                max-height: 25rem;
-                position: relative;
-                overflow: hidden;
-
-                &::before {
-                    transition: $transition-primary;
-
-                    content: "";
-                    width: 100%;
-                    height: 25rem;
-
-                    position: absolute;
-
-                    box-shadow: inset 0 -15rem 6rem -6rem $color-bg;
-                }
-
                 & > div h2:first-child {
                     display: none;
                 }

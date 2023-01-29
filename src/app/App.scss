@@ -6,6 +6,7 @@ $font-family: "Atkinson Hyperlegible", sans-serif;
 $color-page: #fff;
 $color-bg: #f2f6f8;
 $color-primary: #4789c6;
+$color-primary-dark: #376794;
 $color-primary-contrast: #fff;
 $color-secondary: #dead40;
 $color-text: #000000;
@@ -74,6 +75,17 @@ button {
     background-color: $color-primary;
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
+
+    transition: $transition-primary;
+
+    &:is(:hover) {
+        transition: $transition-primary;
+        background-color: $color-primary-dark;
+    }
+
+    &:is(:active, :focus) {
+        transition: $transition-primary;
+    }
 }
 
 pre {

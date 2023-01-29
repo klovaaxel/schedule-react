@@ -91,7 +91,7 @@ export default GroupOverview;
 
 const GetWeek = (course: CourseModel, weekNumber: number) => {
     const regEx = new RegExp(
-        `<div class="week ${weekNumber}[^"]*".*?div>`,
+        `<div class="week ${weekNumber} [^"]*".*?div>`,
         "gms"
     );
 
