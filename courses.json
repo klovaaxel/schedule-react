@@ -57,6 +57,6 @@
     {
         "id": "test",
         "name": "Test Course",
-        "scheduleUrl": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/schedules/testschedule.json"
+        "scheduleUrl": "https://raw.githubusercontent.com/klovaaxel/schedule-react/db/schedules/testschedule.beta.md"
     }
 ]
