@@ -1,3 +1,4 @@
+import { MdToSchedule } from "../../components/scheduleConverter";
 import { ISchedule } from "./schedule-interface";
 
 export async function GetScehdule({
@@ -10,7 +11,8 @@ export async function GetScehdule({
         return null;
     }
 
-    const schedule: ISchedule = await request.json();
+    const response = await request.text();
+    const schedule: ISchedule = MdToSchedule(response);
 
     console.log("Fetched Schedule");
     console.log(schedule);

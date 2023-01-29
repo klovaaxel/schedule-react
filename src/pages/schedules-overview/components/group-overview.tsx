@@ -37,7 +37,7 @@ const GroupOverview = (props: props) => {
                         <li key={course.id} className="course">
                             <Link
                                 to={
-                                    course.scheduleUrl.endsWith(".md")
+                                    !course.scheduleUrl.endsWith(".beta.md")
                                         ? "/course/" +
                                           course.id +
                                           "?week=" +
@@ -49,7 +49,7 @@ const GroupOverview = (props: props) => {
                                 }
                             >
                                 <h3>{course.name}</h3>
-                                {course.scheduleUrl.endsWith(".md") ? (
+                                {!course.scheduleUrl.endsWith(".beta.md") ? (
                                     <section
                                         className="schedule"
                                         dangerouslySetInnerHTML={{
@@ -65,7 +65,7 @@ const GroupOverview = (props: props) => {
                             <aside className="assignments">
                                 <Link
                                     to={
-                                        course.scheduleUrl.includes(".md")
+                                        !course.scheduleUrl.includes(".beta.md")
                                             ? "/course/" +
                                               course.id +
                                               "#" +
