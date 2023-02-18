@@ -4,8 +4,6 @@ export async function GetAssignment(assignmentUrl: string) {
 
     const assignment = await request.text();
 
-    //console.log("Assignment:", assignment);
-
     var showdown = require("showdown"),
         converter = new showdown.Converter(),
         html = converter.makeHtml(assignment);
