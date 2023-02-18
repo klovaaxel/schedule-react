@@ -46,8 +46,6 @@ export const GetSchedule = async (url: string) => {
     for (const i in weeks) {
         const week = weeks[i][2];
 
-        console.log(week);
-
         const weekNumMatch = /(##[^0-9,\n]*)(\d{1,2})/g.exec(week);
         const weekNum = weekNumMatch ? weekNumMatch[2] : "";
 
