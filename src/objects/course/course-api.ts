@@ -39,11 +39,15 @@ export const GetSchedule = async (url: string) => {
     let schedule = await response.text();
 
     // TODO: Clean up this mess...
-    const weeks =
-        (schedule + "DOCEND").match(/\n##(.+?(?=\n##[^#])|.+?(?=DOCEND))/gms) ??
-        [];
+    schedule = schedule.replace(/(^## )/gms, "## ");
+    const weeks = Array.from(schedule.matchAll(/()([^]*)/gms)) ?? [];
+    schedule = schedule.replace(//gms, "");
 
-    for (const week of weeks) {
+    for (const i in weeks) {
+        const week = weeks[i][2];
+
+        console.log(week);
+
         const weekNumMatch = /(##[^0-9,\n]*)(\d{1,2})/g.exec(week);
         const weekNum = weekNumMatch ? weekNumMatch[2] : "";
 
@@ -55,8 +59,6 @@ export const GetSchedule = async (url: string) => {
 
         schedule = schedule.replace(week, tagStart + week + tagEnd);
     }
-
-    schedule.replace("DOCEND", "");
 
     var showdown = require("showdown"),
         converter = new showdown.Converter(),

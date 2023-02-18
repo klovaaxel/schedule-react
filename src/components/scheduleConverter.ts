@@ -1,45 +1,54 @@
 import { IPost, ISchedule } from "../objects/schedule/schedule-interface";
 
 export function MdToSchedule(markdown: string): ISchedule {
-    const id = markdown.match(/(?<=<!-- id=")(.*?)(?=" -->)/gs) ?? [];
-    const name = markdown.match(/(?<=<!-- title -->\n)(.*?)(?=\n)/gs) ?? [];
+    const id =
+        Array.from(markdown.matchAll(/(<!-- id=")(.*?)(" -->)/gs))[0][2] ?? "";
+    let name =
+        Array.from(markdown.matchAll(/(<!-- title -->\n)(.*?)(\n)/gs))[0][2] ??
+        [];
 
-    if (name[0].startsWith("# ")) {
-        name[0] = name[0].substring(2);
+    while (name.startsWith("#" || " ")) {
+        name = name.substring(1);
     }
 
-    const posts = markdown.match(/<!-- week(?:(?!<!-- week).)*/gms) ?? [];
+    markdown = markdown.replace(/<!-- week/gms, "<!-- week");
+    const posts = Array.from(markdown.matchAll(/()([^]*)/gms)) ?? [];
+    markdown = markdown.replace(//gms, "");
 
     let schedule: ISchedule = {
-        id: id[0],
-        name: name[0],
+        id: id,
+        name: name,
         posts: [],
     };
 
     for (const i in posts) {
-        const item = posts[i];
+        const item = posts[i][2];
 
-        const id = item.match(/(?<=<!-- id=")(.*?)(?=" -->)/gs) ?? [];
-        const week = item.match(/(?<=<!-- week )(.*?)(?= -->)/gs) ?? [];
-        const title =
-            item.match(
-                /((?<=<!-- week .. -->\n)|(?<=<!-- week . -->\n)).*?(?=\n)/gms
-            ) ?? [];
+        const id =
+            Array.from(item.matchAll(/(<!-- id=")(.*?)(" -->)/gs))[0][2] ?? [];
+        const week =
+            Array.from(item.matchAll(/(<!-- week )(.*?)( -->)/gs))[0][2] ?? [];
+        let title =
+            Array.from(
+                item.matchAll(
+                    /((<!-- week .. -->\n)|(<!-- week . -->\n))(.*?)(\n)/gms
+                )
+            )[0][4] ?? [];
 
-        if (title[0].startsWith("## ")) {
-            title[0] = title[0].substring(3);
+        while (title.startsWith("#" || " ")) {
+            title = title.substring(1);
         }
 
         const content =
-            item.match(/(?<=<!-- content -->\n)(.*?)(?=(<|$))/gs) ?? [];
-
-        console.log(item);
+            Array.from(
+                item.matchAll(/(<!-- content -->\n)(.*?)((<|$))/gs)
+            )[0][2] ?? [];
 
         const post: IPost = {
-            id: id[0],
-            week: parseInt(week[0]),
-            title: title[0],
-            content: content[0],
+            id: id,
+            week: parseInt(week),
+            title: title,
+            content: content,
         };
 
         schedule.posts.push(post);

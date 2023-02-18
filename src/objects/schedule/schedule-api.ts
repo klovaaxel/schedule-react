@@ -14,8 +14,5 @@ export async function GetScehdule({
     const response = await request.text();
     const schedule: ISchedule = MdToSchedule(response);
 
-    console.log("Fetched Schedule");
-    console.log(schedule);
-
     return schedule;
 }
