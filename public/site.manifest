@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "schedule-react/",
+    "start_url": "/schedule-react/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
