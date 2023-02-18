@@ -6,7 +6,7 @@
 ## Vecka 32
 <!-- id="9b3610b0-62a5-4697-a8e3-b3286814ac54" -->
 <!-- assignments -->
-- Min Fula Lilla Sida
+Min Fula Lilla Sida
 <!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
@@ -14,7 +14,7 @@ Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 ## Vecka 33
 <!-- id="9b3610b0-62a5-4697-a8e3-b3286814ac53" -->
 <!-- assignments -->
-- Min Fula Lilla Sida
+Min Fula Lilla Sida
 <!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
@@ -24,7 +24,7 @@ Genomg[ng av 30 CSS Selectors you should know
 ## Vecka 34
 <!-- id="9b3610b0-62a5-4697-a8e3-b3286814ac52" -->
 <!-- assignments -->
-- Min Fula Lilla Sida
+Min Fula Lilla Sida
 <!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
@@ -34,7 +34,7 @@ Genomg[ng av 30 CSS Selectors you should know
 ## Vecka 35
 <!-- id="9b3610b0-62a5-4697-a8e3-b3286814ac51" -->
 <!-- assignments -->
-- Min Fula Lilla Sida
+[EFF](https://eff.org)
 <!-- content -->
 Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
