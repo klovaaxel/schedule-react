@@ -24,10 +24,12 @@ export default function AssingmentChip({ props }: { props: props }) {
     let assignmentContent = isLink
         ? Array.from(assignment.matchAll(/(\[.*\])(\(.*\))/gms))[0][1]
         : assignment;
-    assignmentContent = assignmentContent.substring(
-        1,
-        assignmentContent.length - 1
-    );
+    if (assignmentContent !== assignment) {
+        assignmentContent = assignmentContent.substring(
+            1,
+            assignmentContent.length - 1
+        );
+    }
 
     console.log(Array.from(assignment.matchAll(/(\[.*\])(\(.*\))/gms)));
 
