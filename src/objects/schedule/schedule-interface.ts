@@ -9,4 +9,5 @@ export interface IPost {
     week: number;
     title: string;
     content: string;
+    assignments: string[];
 }

@@ -44,11 +44,19 @@ export function MdToSchedule(markdown: string): ISchedule {
                 item.matchAll(/(<!-- content -->\n)(.*?)((<|$))/gs)
             )[0][2] ?? [];
 
+        const assignments =
+            Array.from(
+                item.matchAll(/(<!-- assignments -->\n)(.*?)((<|$))/gs)
+            )[0][2]
+                .split("\n")
+                .filter((assignment) => assignment !== "") ?? [];
+
         const post: IPost = {
             id: id,
             week: parseInt(week),
             title: title,
             content: content,
+            assignments: assignments,
         };
 
         schedule.posts.push(post);

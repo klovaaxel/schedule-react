@@ -2,6 +2,7 @@ import { IPost } from "../../objects/schedule/schedule-interface";
 import ReactMarkdown from "react-markdown";
 import "./post.scss";
 import { useState } from "react";
+import AssignmentChip from "../../components/assignment-chip/assignment-chip";
 
 export function Post({ post }: { post: IPost }) {
     const [content, setContent] = useState(post.content);
@@ -13,9 +14,18 @@ export function Post({ post }: { post: IPost }) {
     return (
         <div className="post">
             <h2>{post.title}</h2>
-            <div className="content">
+            <aside className="assignments">
+                {post.assignments.map((assignment) => {
+                    return (
+                        <AssignmentChip
+                            props={{ assignment: assignment, course: null }}
+                        ></AssignmentChip>
+                    );
+                })}
+            </aside>
+            <section className="content">
                 <ReactMarkdown>{content}</ReactMarkdown>
-            </div>
+            </section>
             {canEditContent ? (
                 <div className="edit {}" id={`edit-post-${post.id}`}>
                     <label htmlFor={`post-${post.id}`}>Edit</label>

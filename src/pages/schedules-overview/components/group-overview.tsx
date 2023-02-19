@@ -1,10 +1,12 @@
 import ReactMarkdown from "react-markdown";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
+import AssingmentChip from "../../../components/assignment-chip/assignment-chip";
 import { GetWeekNumber } from "../../../components/week-number";
 import { CourseModel } from "../../../objects/course/course-model";
 import { GroupModel } from "../../../objects/group/group-model";
 import { GetScehdule } from "../../../objects/schedule/schedule-api";
+import { IPost } from "../../../objects/schedule/schedule-interface";
 
 interface props {
     group: GroupModel;
@@ -16,16 +18,21 @@ const GroupOverview = (props: props) => {
     //const { t } = useTranslation();
 
     const group = props.group;
-    const week = props.week ?? GetWeekNumber();
+    const weekNumber = props.week ?? GetWeekNumber();
 
-    function GetWeekV2(course: CourseModel, weekNumber: number): string {
+    console.log(GetPostByWeek(group!.courses![3], 35));
+
+    function GetPostByWeek(
+        course: CourseModel,
+        weekNumber: number
+    ): IPost | null {
         const { data: schedule } = useQuery(
             [`schedule-${course.id}`, course.scheduleUrl],
             GetScehdule
         );
 
-        const markdown = schedule?.posts.find((w) => w.week === week)?.content;
-        return markdown ?? "";
+        const week = schedule?.posts.find((w) => w.week === weekNumber);
+        return week ?? null;
     }
 
     return (
@@ -41,11 +48,11 @@ const GroupOverview = (props: props) => {
                                         ? "/course/" +
                                           course.id +
                                           "?week=" +
-                                          week
+                                          weekNumber
                                         : "beta/course/" +
                                           course.id +
                                           "?week=" +
-                                          week
+                                          weekNumber
                                 }
                             >
                                 <h3>{course.name}</h3>
@@ -53,31 +60,30 @@ const GroupOverview = (props: props) => {
                                     <section
                                         className="schedule"
                                         dangerouslySetInnerHTML={{
-                                            __html: GetWeek(course, week),
+                                            __html: GetWeek(course, weekNumber),
                                         }}
                                     ></section>
                                 ) : (
                                     <ReactMarkdown>
-                                        {GetWeekV2(course, week)}
+                                        {GetPostByWeek(course, weekNumber)
+                                            ?.content ?? ""}
                                     </ReactMarkdown>
                                 )}
                             </Link>
                             <aside className="assignments">
-                                <Link
-                                    to={
-                                        !course.scheduleUrl.includes(".beta.md")
-                                            ? "/course/" +
-                                              course.id +
-                                              "#" +
-                                              "Assignment?"
-                                            : "/beta/course/" +
-                                              course.id +
-                                              "#" +
-                                              "Assignment?"
-                                    }
-                                >
-                                    Im a Assingment
-                                </Link>
+                                {GetPostByWeek(
+                                    course,
+                                    weekNumber
+                                )?.assignments.map((assignment) => {
+                                    return (
+                                        <AssingmentChip
+                                            props={{
+                                                assignment: assignment,
+                                                course: course,
+                                            }}
+                                        />
+                                    );
+                                })}
                             </aside>
                         </li>
                     );
