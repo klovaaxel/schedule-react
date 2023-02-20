@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { CourseModel } from "../../objects/course/course-model";
@@ -38,6 +40,11 @@ export default function AssingmentChip({ props }: { props: props }) {
             return (
                 <a href={assignmentLink} className="assignment-chip">
                     <ReactMarkdown>{assignmentContent}</ReactMarkdown>
+                    {assignmentLink.startsWith("") ? (
+                        <FontAwesomeIcon icon={faArrowRightToBracket} />
+                    ) : (
+                        <></>
+                    )}
                 </a>
             );
         } else {
@@ -52,6 +59,11 @@ export default function AssingmentChip({ props }: { props: props }) {
             return (
                 <a href={assignmentLink} className="assignment-chip">
                     <ReactMarkdown>{assignmentContent}</ReactMarkdown>
+                    {assignmentLink.startsWith("") ? (
+                        <FontAwesomeIcon icon={faArrowRightToBracket} />
+                    ) : (
+                        <></>
+                    )}
                 </a>
             );
         } else {

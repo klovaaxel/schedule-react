@@ -10,7 +10,7 @@
     color: $color-primary-contrast;
 
     display: block;
-    padding: 0.2rem 1rem;
+    padding: 0.4rem 0.8rem;
     margin: 0.5rem 0;
 
     width: max-content;
@@ -25,6 +25,13 @@ a.assignment-chip {
     color: $color-primary-contrast;
     text-decoration: unset;
     transition: $transition-primary;
+
+    display: flex;
+    gap: 1ch;
+
+    svg {
+        margin-top: 0.1ch;
+    }
 
     &:hover {
         color: $color-text;
