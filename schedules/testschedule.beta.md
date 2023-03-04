@@ -50,8 +50,8 @@ Vi ska jobba vidare med uppgiften MFLS (Min Fula Lilla Sida)
 
 Genomg[ng av 30 CSS Selectors you should know
 
-<!-- week 9 -->
-## Vecka 9
+<!-- week 10 -->
+## Vecka 10
 <!-- assignments -->
 [EFF](https://eff.org)
 <!-- content -->
