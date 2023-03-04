@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/schedule-react/static/css/main.20a07a74.css",
-    "main.js": "/schedule-react/static/js/main.39fdb892.js",
+    "main.css": "/schedule-react/static/css/main.1447170d.css",
+    "main.js": "/schedule-react/static/js/main.9ea32a5c.js",
     "static/js/787.75d4c42a.chunk.js": "/schedule-react/static/js/787.75d4c42a.chunk.js",
     "service-worker.js": "/schedule-react/service-worker.js",
     "static/media/AtkinsonHyperlegible-BoldItalic.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-BoldItalic.23edeb4cbf5a339bb951.ttf",
@@ -10,12 +10,12 @@
     "static/media/AtkinsonHyperlegible-Regular.ttf": "/schedule-react/static/media/AtkinsonHyperlegible-Regular.b67275748172037676f3.ttf",
     "static/media/logo.svg": "/schedule-react/static/media/logo.57d479d2a2bfbfff81ed7557bc785bd3.svg",
     "index.html": "/schedule-react/index.html",
-    "main.20a07a74.css.map": "/schedule-react/static/css/main.20a07a74.css.map",
-    "main.39fdb892.js.map": "/schedule-react/static/js/main.39fdb892.js.map",
+    "main.1447170d.css.map": "/schedule-react/static/css/main.1447170d.css.map",
+    "main.9ea32a5c.js.map": "/schedule-react/static/js/main.9ea32a5c.js.map",
     "787.75d4c42a.chunk.js.map": "/schedule-react/static/js/787.75d4c42a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20a07a74.css",
-    "static/js/main.39fdb892.js"
+    "static/css/main.1447170d.css",
+    "static/js/main.9ea32a5c.js"
   ]
 }
