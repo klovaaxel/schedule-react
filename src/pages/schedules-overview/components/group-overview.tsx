@@ -20,8 +20,6 @@ const GroupOverview = (props: props) => {
     const group = props.group;
     const weekNumber = props.week ?? GetWeekNumber();
 
-    console.log(GetPostByWeek(group!.courses![3], 35));
-
     function GetPostByWeek(
         course: CourseModel,
         weekNumber: number

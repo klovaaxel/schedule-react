@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import "./post.scss";
 import { useState } from "react";
 import AssignmentChip from "../../components/assignment-chip/assignment-chip";
+import { v4 as uuid } from "uuid";
 
 export function Post({ post }: { post: IPost }) {
     const [content, setContent] = useState(post.content);
@@ -17,9 +18,11 @@ export function Post({ post }: { post: IPost }) {
             <aside className="assignments">
                 {post.assignments.map((assignment) => {
                     return (
-                        <AssignmentChip
-                            props={{ assignment: assignment, course: null }}
-                        ></AssignmentChip>
+                        <span key={uuid()}>
+                            <AssignmentChip
+                                props={{ assignment: assignment, course: null }}
+                            ></AssignmentChip>
+                        </span>
                     );
                 })}
             </aside>

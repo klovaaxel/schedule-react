@@ -14,8 +14,6 @@ export default function AssingmentChip({ props }: { props: props }) {
     const assignment: string = props.assignment;
     const course: CourseModel | null = props.course;
 
-    console.log(assignment);
-
     const isLink = assignment.match(/\[.*\]\(.*\)/gms)?.length ?? 0 > 0;
 
     let assignmentLink = isLink
@@ -32,8 +30,6 @@ export default function AssingmentChip({ props }: { props: props }) {
             assignmentContent.length - 1
         );
     }
-
-    console.log(Array.from(assignment.matchAll(/(\[.*\])(\(.*\))/gms)));
 
     if (course ? course.scheduleUrl.endsWith(".beta.md") : true) {
         if (isLink) {

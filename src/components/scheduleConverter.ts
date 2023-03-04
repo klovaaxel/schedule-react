@@ -1,4 +1,5 @@
 import { IPost, ISchedule } from "../objects/schedule/schedule-interface";
+import { v4 as uuid } from "uuid";
 
 export function MdToSchedule(markdown: string): ISchedule {
     const id =
@@ -24,8 +25,10 @@ export function MdToSchedule(markdown: string): ISchedule {
     for (const i in posts) {
         const item = posts[i][2];
 
-        const id =
-            Array.from(item.matchAll(/(<!-- id=")(.*?)(" -->)/gs))[0][2] ?? [];
+        const id = Array.from(item.matchAll(/(<!-- id=")(.*?)(" -->)/gs))[0]
+            ? Array.from(item.matchAll(/(<!-- id=")(.*?)(" -->)/gs))[0][2] ??
+              null
+            : null;
         const week =
             Array.from(item.matchAll(/(<!-- week )(.*?)( -->)/gs))[0][2] ?? [];
         let title =
@@ -52,7 +55,7 @@ export function MdToSchedule(markdown: string): ISchedule {
                 .filter((assignment) => assignment !== "") ?? [];
 
         const post: IPost = {
-            id: id,
+            id: id == null || id === "" ? uuid() : (id as string),
             week: parseInt(week),
             title: title,
             content: content,
